@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-06.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-06.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-06.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1?query=PREFIX%20tao%3A%20%3Chttp%3A%2F%2Fpurl.org%2Ftao%2Fns%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0APREFIX%20geo-pos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%0A%0Aselect%20%28%3Fm%20as%20%3Fmentioned_place%29%20%28%3Fc%20as%20%3Ftotal_mentions%29%20%0A%7B%0A%09%7B%0A%20%20%20%20%20%20%20%20select%20%3Fm%20%28count%28%3Flodge%29%20as%20%3Fc%29%20where%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Flodge%20a%20tao%3ALodgingFacility%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%09schema%3Areview%20%3Fr%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fr%20schema%3Amentions%20%3Fm%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3AreviewRating%20%3Frating%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Frating%20tao%3AnormRatingValue%20%3Fnorm_rating%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fm%20a%20geo-pos%3ASpatialThing%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20FILTER%20%28%3Fnorm_rating%20%3E%200.6%29%0A%20%20%20%20%09%7D%20group%20by%20%3Fm%0A%09%7D%0A%7D%0AORDER%20BY%20DESC%28%3Fc%29%0ALIMIT%2010"/>
+        <testannotationschema:hasCQ xml:lang="en">#CQ6: What are the Tourist Locations cited most in positive user reviews?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;sparql xmlns=&apos;http://www.w3.org/2005/sparql-results#&apos;&gt;
+	&lt;head&gt;
+		&lt;variable name=&apos;mentioned_place&apos;/&gt;
+		&lt;variable name=&apos;total_mentions&apos;/&gt;
+	&lt;/head&gt;
+	&lt;results&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2643743/&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;10787&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Sardinia&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;5156&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Cagliari&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;3655&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Alghero&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;3393&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Hyde_Park,_London&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;2954&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/London_Paddington_station&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;1946&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2646325/&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;1702&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2640692/&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;1505&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Bosa&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;1478&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Olbia&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;1368&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+	&lt;/results&gt;
+&lt;/sparql&gt;</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest>#CQ6: What are the Tourist Locations cited most in positive user reviews?
+
+PREFIX tao: &lt;http://purl.org/tao/ns#&gt;
+PREFIX schema: &lt;http://schema.org/&gt;
+PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX geo-pos: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+
+select (?m as ?mentioned_place) (?c as ?total_mentions) 
+{
+	{
+        select ?m (count(?lodge) as ?c) where { 
+            ?lodge a tao:LodgingFacility ;
+               	schema:review ?r .
+            ?r schema:mentions ?m ;
+               schema:reviewRating ?rating .
+            ?rating tao:normRatingValue ?norm_rating .
+            ?m a geo-pos:SpatialThing .
+            FILTER (?norm_rating &gt; 0.6)
+    	} group by ?m
+	}
+}
+ORDER BY DESC(?c)
+LIMIT 10</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2021-05-10</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Luca Secchi</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on TAO release 1.0</rdfs:comment>
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

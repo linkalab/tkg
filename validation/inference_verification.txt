@@ -1,0 +1,10 @@
+I01	If an tao:Accommodation is tao:partOf a tao:LodgingFacility then the inverse relation with tao:includes is inferred
+I02	If a generic acco:AccommodationFeature has the correct values for data properties gr:name and acco:value the correct tao:LocationAmenity subclass is inferred
+I03	If a tao:Accommodation is related with tao:partOf to two tao:LoggingFacility those represent the same entity
+I04	If tao:LodgingFacility includes a tao:HotelRoom then it is a tao:Hotel
+I05	If a tao:HotelRoom is part of a tao:LodgingFacility then the latter is a tao:Hotel
+I06	If tao:LodgingFacility includes a tao:CampingPitch then it is a tao:Campground
+I07	If a tao:CampingPitch is part of a tao:LodgingFacility then the latter is a tao:Campground
+I08	If a LodgingFacility is part of an administrative division which is part of a ToristDestination than that LodgingFacillity is considered part of that TouristDestination
+I09	If a tao:LodgingBusiness has a tao:NormAggregatedRate with schema:ratingValue less or equal to .6 it is a LowRatedFacility, if it is >=.6 and <.7.5 it is a MediumRatedFacility, if it is >=.7.5 it is HighRatedFacility
+I10	An accommodation feature which is associated to an Accommodation (tao:includes) is also associated to the tao:LodgingFacility that includes the Accommodation 

@@ -1,0 +1,8 @@
+EP01	A tao:Accommodation is tao:partOf of more than one tao:LodgingFacility that are disjoint.
+EP02	A tao:HotelRoom is tao:partOf a subclass of tao:LodgingBusiness that is not a tao:Hotel (or one of its sublcasses).
+EP03	A tao:Accommodation is not tao:partOf a tao:LodgingFacility.
+EP04	A tao:Accommodation is tao:partOf of another tao:Accommodation.
+EP05	An acco:BedDetails is not connected with a tao:Accommodation with inverse of acco:bed property.
+EP06	A tao:LocationAmenity is not associated to any tao:Accommodation or tao:LodgingFacility with tao:feature property.
+EP07	A tao:LodgingDescription is not associated to any tao:LodgingFacility with inverse of schema:subjectOf property.
+EP08	A tao:NormAggregateRating is not associated to any tao:LodgingFacility with tao:lodgingFacilityReviewed property.

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-03.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-03.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-03.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1?query=%23CQ3%3A%20%22In%20which%20tourist%20destinations%20can%20you%20find%20the%20highest%20percentage%20of%20high%20priced%20Lodging%20Facility%20%28at%20least%20one%20offer%20for%20an%20accommodation%20for%20two%20person%20with%20a%20nightly%20price%202%20times%20over%20the%20mean%20price%29%20with%20respect%20to%20the%20total%20number%20of%20Lodging%20Facility%20within%20the%20destination%3F%0A%0APREFIX%20gr%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fgoodrelations%2Fv1%23%3E%0APREFIX%20acco%3A%20%3Chttp%3A%2F%2Fpurl.org%2Facco%2Fns%23%3E%0APREFIX%20tao%3A%20%3Chttp%3A%2F%2Fpurl.org%2Ftao%2Fns%23%3E%0APREFIX%20xsd%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0ASELECT%20%3Fdst%20%3Fpercent_high_priced_lodges%20%20WHERE%0A%7B%0A%20%20%20%20%7BSELECT%20%3Fdst%20%28COUNT%28%3Flodge%29%20%2F%20AVG%28%3Ftot_lodge1%29%20AS%20%3Fpercent_high_priced_lodges%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20SELECT%20%3Fdst%20%3Flodge%20%28AVG%28%3Favg_nightly_price%29%20as%20%3Fanp%29%20%28MAX%28%3Fnight_price%29%20AS%20%3Fmnp%29%20%28AVG%28%3Ftot_lodge%29%20AS%20%3Ftot_lodge1%29%20%28%20%20MAX%28%3Fnight_price%29%2FAVG%28%3Favg_nightly_price%29%20%20AS%20%3Ftimes_avg_nightly_price%29%20WHERE%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20select%20%3Fdst%20%3Flodge%20%3Fac%20%3Foffer%20%3Fprice%20%3Fnight_price%20%3Fdays%20%3Fcurrency%20%3Fmax_occ%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Foffer%20gr%3AincludesObject%20%3Fb%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gr%3AhasPriceSpecification%20%3Fprice_spec%20.%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fb%20gr%3AamountOfThisGood%20%3Fdays%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fprice_spec%20gr%3AhasCurrencyValue%20%3Fprice%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gr%3AhasCurrency%20%3Fcurrency%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fb%20gr%3AtypeOfGood%20%3Fac%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fac%20acco%3Aoccupancy%20%3Focc%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tao%3ApartOf%20%3Flodge%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Flodge%20tao%3AisContainedInGeo%20%3Fdst%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fdst%20a%20tao%3ATouristDestination%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%7B%3Focc%20gr%3AhasMaxValue%20%3Fmax_occ%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Focc%20gr%3AhasValue%20%3Fmax_occ_float%20.%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28xsd%3Ainteger%28%3Fmax_occ_float%29%20as%20%3Fmax_occ%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20FILTER%20%28%20%3Fmax_occ%20%3D%202%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%20%28%20%28%3Fprice%2F%3Fdays%29%20AS%20%3Fnight_price%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20select%20%3Fdst%20%28AVG%28%3Fnight_price%29%20AS%20%3Favg_nightly_price%29%20%28MIN%28%3Fnight_price%29%20AS%20%3Fmin_nightly_price%29%20%28MAX%28%3Fnight_price%29%20AS%20%3Fmax_nightly_price%29%20%20%28SAMPLE%28%3Fcurrency%29%20as%20%3Fcurrenc%29%20%28count%28DISTINCT%28%3Flodge%29%29%20AS%20%3Ftot_lodge%29%20where%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20select%20%3Fdst%20%3Flodge%20%3Fac%20%3Foffer%20%3Fprice%20%3Fnight_price%20%3Fdays%20%3Fcurrency%20%3Fmax_occ%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Foffer%20gr%3AincludesObject%20%3Fb%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gr%3AhasPriceSpecification%20%3Fprice_spec%20.%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fb%20gr%3AamountOfThisGood%20%3Fdays%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fprice_spec%20gr%3AhasCurrencyValue%20%3Fprice%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gr%3AhasCurrency%20%3Fcurrency%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fb%20gr%3AtypeOfGood%20%3Fac%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fac%20acco%3Aoccupancy%20%3Focc%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tao%3ApartOf%20%3Flodge%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Flodge%20tao%3AisContainedInGeo%20%3Fdst%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fdst%20a%20tao%3ATouristDestination%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%7B%3Focc%20gr%3AhasMaxValue%20%3Fmax_occ%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20OPTIONAL%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Focc%20gr%3AhasValue%20%3Fmax_occ_float%20.%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%28xsd%3Ainteger%28%3Fmax_occ_float%29%20as%20%3Fmax_occ%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20FILTER%20%28%20%3Fmax_occ%20%3D%202%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20BIND%20%28%20%28%3Fprice%2F%3Fdays%29%20AS%20%3Fnight_price%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20GROUP%20BY%20%3Fdst%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20GROUP%20bY%20%3Fdst%20%3Flodge%0A%0A%20%20%20%20%20%20%20%20%7D%20FILTER%20%28%20%3Ftimes_avg_nightly_price%20%3E%3D%202%29%0A%20%20%20%20%7D%20GROUP%20BY%20%3Fdst%0A%20%20%20%20%20%20ORDER%20BY%20DESC%28%3Fpercent_high_priced_lodges%29%0A%20%20%09%20%20LIMIT%201%0A%20%20%20%20%7D%0A%7D"/>
+        <testannotationschema:hasCQ xml:lang="en">#CQ3: Which Tourist Destinations have the highest percentage of high priced Lodging Facility (at least one offer for an accommodation for two persons with a nightly price two times over the mean price)?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;sparql xmlns=&apos;http://www.w3.org/2005/sparql-results#&apos;&gt;
+	&lt;head&gt;
+		&lt;variable name=&apos;dst&apos;/&gt;
+		&lt;variable name=&apos;percent_high_priced_lodges&apos;/&gt;
+	&lt;/head&gt;
+	&lt;results&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;percent_high_priced_lodges&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#decimal&apos;&gt;0.037790002391772303276728&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+	&lt;/results&gt;
+&lt;/sparql&gt;</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">#CQ3: Which Tourist Destinations have the highest percentage of high priced Lodging Facility (at least one offer for an accommodation for two persons with a nightly price two times over the mean price)?
+
+PREFIX gr: &lt;http://purl.org/goodrelations/v1#&gt;
+PREFIX acco: &lt;http://purl.org/acco/ns#&gt;
+PREFIX tao: &lt;http://purl.org/tao/ns#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+SELECT ?dst ?percent_high_priced_lodges  WHERE
+{
+    {SELECT ?dst (COUNT(?lodge) / AVG(?tot_lodge1) AS ?percent_high_priced_lodges)
+    {
+        {
+            SELECT ?dst ?lodge (AVG(?avg_nightly_price) as ?anp) (MAX(?night_price) AS ?mnp) (AVG(?tot_lodge) AS ?tot_lodge1) (  MAX(?night_price)/AVG(?avg_nightly_price)  AS ?times_avg_nightly_price) WHERE
+            {
+
+                {
+                    select ?dst ?lodge ?ac ?offer ?price ?night_price ?days ?currency ?max_occ {
+                        ?offer gr:includesObject ?b ;
+                               gr:hasPriceSpecification ?price_spec .    
+                        ?b gr:amountOfThisGood ?days .
+                        ?price_spec gr:hasCurrencyValue ?price ;
+                                    gr:hasCurrency ?currency .
+                        ?b gr:typeOfGood ?ac .
+                        ?ac acco:occupancy ?occ ;
+                            tao:partOf ?lodge .
+                        ?lodge tao:isContainedInGeo ?dst .
+                        ?dst a tao:TouristDestination .
+                        OPTIONAL{?occ gr:hasMaxValue ?max_occ  }
+                        OPTIONAL{
+                            ?occ gr:hasValue ?max_occ_float . 
+                            BIND(xsd:integer(?max_occ_float) as ?max_occ)
+                        }
+                        FILTER ( ?max_occ = 2)
+                        BIND ( (?price/?days) AS ?night_price)
+                    }
+                }
+
+                {
+                    select ?dst (AVG(?night_price) AS ?avg_nightly_price) (MIN(?night_price) AS ?min_nightly_price) (MAX(?night_price) AS ?max_nightly_price)  (SAMPLE(?currency) as ?currenc) (count(DISTINCT(?lodge)) AS ?tot_lodge) where
+                    {
+                        select ?dst ?lodge ?ac ?offer ?price ?night_price ?days ?currency ?max_occ {
+                            ?offer gr:includesObject ?b ;
+                                   gr:hasPriceSpecification ?price_spec .    
+                            ?b gr:amountOfThisGood ?days .
+                            ?price_spec gr:hasCurrencyValue ?price ;
+                                        gr:hasCurrency ?currency .
+                            ?b gr:typeOfGood ?ac .
+                            ?ac acco:occupancy ?occ ;
+                                tao:partOf ?lodge .
+                            ?lodge tao:isContainedInGeo ?dst .
+                            ?dst a tao:TouristDestination .
+                            OPTIONAL{?occ gr:hasMaxValue ?max_occ  }
+                            OPTIONAL{
+                                ?occ gr:hasValue ?max_occ_float . 
+                                BIND(xsd:integer(?max_occ_float) as ?max_occ)
+                            }
+                            FILTER ( ?max_occ = 2)
+                            BIND ( (?price/?days) AS ?night_price)
+                        }
+
+                    } GROUP BY ?dst
+                } 
+            } GROUP bY ?dst ?lodge
+
+        } FILTER ( ?times_avg_nightly_price &gt;= 2)
+    } GROUP BY ?dst
+      ORDER BY DESC(?percent_high_priced_lodges)
+  	  LIMIT 1
+    }
+}</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2021-05-10</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Luca Secchi</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on TAO release 1.0</rdfs:comment>
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

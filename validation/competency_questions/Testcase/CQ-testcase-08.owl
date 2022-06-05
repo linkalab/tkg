@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-08.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-08.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-08.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1?query=PREFIX%20tao%3A%20%3Chttp%3A%2F%2Fpurl.org%2Ftao%2Fns%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0APREFIX%20geo-pos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%0APREFIX%20owl%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20kgt_td%3A%20%3Chttp%3A%2F%2Ftourism.kg.linkalab-cloud.com%2Ftd%2F%3E%0A%0Aselect%20%3Fdst%20%3Flodge_type%20%3Freview_count%20%0A%7B%0A%09%7B%0A%20%20%20%20select%20%3Fdst%20%3Flodge_type%20%28count%28DISTINCT%20%3Flodge%29%20as%20%3Flodge_count%29%20%28count%28DISTINCT%20%3Fr%29%20AS%20%3Freview_count%29%20where%20%7B%20%0A%20%20%20%20%20%20%20%20%3Flodge%20a%20tao%3ALodgingFacility%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20a%20%3Flodge_type%20%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3Areview%20%3Fr%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20tao%3AisContainedInGeo%20%3Fdst%20.%0A%20%20%20%20%20%20%20%20%3Flodge_type%20rdfs%3AsubClassOf%2A%20tao%3ALodgingFacility%20.%0A%20%20%20%20%20%20%20%20%3Fdst%20a%20tao%3ATouristDestination%20.%0A%20%20%20%20%20%20%20%20filter%28%3Fdst%20%3D%20kgt_td%3Asardinia%29%0A%20%20%20%20%7D%20group%20by%20%3Flodge_type%20%3Fdst%0A%20%20%20%20HAVING%20%28%3Flodge_type%20%21%3D%20tao%3ALodgingFacility%29%0A%20%20%20%20ORDER%20BY%20DESC%28%3Freview_count%29%0A%20%20%20%20%7D%0A%20%20%20%20union%0A%09%7B%0A%20%20%20%20select%20%3Fdst%20%3Flodge_type%20%28count%28DISTINCT%20%3Flodge%29%20as%20%3Flodge_count%29%20%28count%28DISTINCT%20%3Fr%29%20AS%20%3Freview_count%29%20where%20%7B%20%0A%20%20%20%20%20%20%20%20%3Flodge%20a%20tao%3ALodgingFacility%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20a%20%3Flodge_type%20%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3Areview%20%3Fr%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20tao%3AisContainedInGeo%20%3Fdst%20.%0A%20%20%20%20%20%20%20%20%3Flodge_type%20rdfs%3AsubClassOf%2A%20tao%3ALodgingFacility%20.%0A%20%20%20%20%20%20%20%20%3Fdst%20a%20tao%3ATouristDestination%20.%0A%20%20%20%20%20%20%20%20filter%28%3Fdst%20%3D%20kgt_td%3Alondon%29%0A%20%20%20%20%7D%20group%20by%20%3Flodge_type%20%3Fdst%0A%20%20%20%20HAVING%20%28%3Flodge_type%20%21%3D%20tao%3ALodgingFacility%29%0A%20%20%20%20ORDER%20BY%20DESC%28%3Freview_count%29%0A%20%20%20%20%7D%0A%20%20%20%20%0A%7D%20LIMIT%202"/>
+        <testannotationschema:hasCQ xml:lang="en"># CQ8: Which type of Lodging Facility is more reviewed by tourists in a specific Tourist Destination?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;sparql xmlns=&apos;http://www.w3.org/2005/sparql-results#&apos;&gt;
+	&lt;head&gt;
+		&lt;variable name=&apos;dst&apos;/&gt;
+		&lt;variable name=&apos;lodge_type&apos;/&gt;
+		&lt;variable name=&apos;review_count&apos;/&gt;
+	&lt;/head&gt;
+	&lt;results&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/sardinia&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;lodge_type&apos;&gt;
+				&lt;uri&gt;http://purl.org/tao/ns#Apartment&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;review_count&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;130277&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/sardinia&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;lodge_type&apos;&gt;
+				&lt;uri&gt;http://purl.org/tao/ns#House&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;review_count&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;93378&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+	&lt;/results&gt;
+&lt;/sparql&gt;</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest># CQ8: Which type of Lodging Facility is more reviewed by tourists in a specific Tourist Destination? 
+
+PREFIX tao: &lt;http://purl.org/tao/ns#&gt;
+PREFIX schema: &lt;http://schema.org/&gt;
+PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX geo-pos: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX kgt_td: &lt;http://tourism.kg.linkalab-cloud.com/td/&gt;
+
+select ?dst ?lodge_type ?review_count 
+{
+	{
+    select ?dst ?lodge_type (count(DISTINCT ?lodge) as ?lodge_count) (count(DISTINCT ?r) AS ?review_count) where { 
+        ?lodge a tao:LodgingFacility ;
+            a ?lodge_type ; 
+            schema:review ?r ;
+             tao:isContainedInGeo ?dst .
+        ?lodge_type rdfs:subClassOf* tao:LodgingFacility .
+        ?dst a tao:TouristDestination .
+        filter(?dst = kgt_td:sardinia)
+    } group by ?lodge_type ?dst
+    HAVING (?lodge_type != tao:LodgingFacility)
+    ORDER BY DESC(?review_count)
+    }
+    union
+	{
+    select ?dst ?lodge_type (count(DISTINCT ?lodge) as ?lodge_count) (count(DISTINCT ?r) AS ?review_count) where { 
+        ?lodge a tao:LodgingFacility ;
+            a ?lodge_type ; 
+            schema:review ?r ;
+             tao:isContainedInGeo ?dst .
+        ?lodge_type rdfs:subClassOf* tao:LodgingFacility .
+        ?dst a tao:TouristDestination .
+        filter(?dst = kgt_td:london)
+    } group by ?lodge_type ?dst
+    HAVING (?lodge_type != tao:LodgingFacility)
+    ORDER BY DESC(?review_count)
+    }
+    
+} LIMIT 2</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2021-05-10</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Luca Secchi</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on TAO release 1.0</rdfs:comment>
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-02.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-02.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-02.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1?query=PREFIX%20gdb-geo%3A%20%3Chttp%3A%2F%2Fwww.ontotext.com%2Fowlim%2Fgeo%23%3E%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0APREFIX%20gn%3A%20%3Chttp%3A%2F%2Fwww.geonames.org%2Fontology%23%3E%0APREFIX%20tao%3A%20%3Chttp%3A%2F%2Fpurl.org%2Ftao%2Fns%23%3E%0APREFIX%20acco%3A%20%3Chttp%3A%2F%2Fpurl.org%2Facco%2Fns%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20onto%3A%20%3Chttp%3A%2F%2Fwww.ontotext.com%2F%3E%0A%0ASELECT%20%3Flodge%20%28SAMPLE%28%3Fname%29%20AS%20%3Fapartment_name%29%20%28COUNT%28%3Fpark%29%20AS%20%3Fnum_parks_nearby%29%20%0AFROM%20onto%3Aexplicit%20%20%23%23%20use%20only%20explicit%20statement%20without%20any%20inference%0A%0AWHERE%20%7B%0A%20%20%20%7B%20%0A%20%20%20%20%20select%20DISTINCT%20%3Flodge%20%20%3Fname%20%3Flat%20%3Flong%20where%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Flodge%20a%20tao%3AApartment%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20tao%3Afeature%20%3Fb%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3Alatitude%20%3Flat%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3Alongitude%20%3Flong%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20schema%3Aname%20%3Fname.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fb%20a%20tao%3AWi-FiZone%20.%20%20%20%20%20%20%20%20%0A%20%20%20%20%09%0A%09%7D%20%09%0A%20%20%20%7D%0A%20%20%20%20SERVICE%20%3Chttp%3A%2F%2Ffactforge.net%2Frepositories%2Fff-news%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fpark%20gdb-geo%3Anearby%28%3Flat%20%3Flong%20%221km%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20gn%3AfeatureCode%20gn%3AL.PRK%20.%0A%20%20%20%20%7D%0A%7D%20%0AGROUP%20BY%20%3Flodge%0AHAVING%20%28%20%3Fnum_parks_nearby%20%3E%201%29%0AORDER%20BY%20DESC%28%3Fnum_parks_nearby%29%0ALIMIT%203"/>
+        <testannotationschema:hasCQ xml:lang="en">#CQ2: Find 3 apartments with wi-fi near at least 2 parks.</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;sparql xmlns=&apos;http://www.w3.org/2005/sparql-results#&apos;&gt;
+	&lt;head&gt;
+		&lt;variable name=&apos;lodge&apos;/&gt;
+		&lt;variable name=&apos;apartment_name&apos;/&gt;
+		&lt;variable name=&apos;num_parks_nearby&apos;/&gt;
+	&lt;/head&gt;
+	&lt;results&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/9bd5bef8f50e0e03&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;apartment_name&apos;&gt;
+				&lt;literal&gt;1 Bedroom Luxury Apartment Chancery Lane&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;num_parks_nearby&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;3&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/d266a82aff5204e8&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;apartment_name&apos;&gt;
+				&lt;literal&gt;1 Bedroom Luxury Apartment Chancery Lane&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;num_parks_nearby&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;3&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/air/42701380&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;apartment_name&apos;&gt;
+				&lt;literal&gt;2 bedroom basement apartment with 50 inch TV&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;num_parks_nearby&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;3&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+	&lt;/results&gt;
+&lt;/sparql&gt;</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">#CQ1: What are the hotels with more tha 1000 reviews and the lowest mean value of users review scores?
+
+PREFIX tao: &lt;http://purl.org/tao/ns#&gt;
+PREFIX acco: &lt;http://purl.org/acco/ns#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX schema: &lt;http://schema.org/&gt;
+
+select ?lodge ( COUNT(?r) AS ?num_reviews ) ( SUM(?norm_rating) AS ?tot_norm_rating ) ( ?tot_norm_rating / ?num_reviews AS ?mean_norm_rating )  
+where { 
+        ?lodge a tao:LodgingFacility ;
+        a tao:Hotel ;
+        schema:review ?r .
+		?r  schema:reviewRating ?rating .
+    	?rating tao:normRatingValue ?norm_rating
+}
+GROUP BY ?lodge
+HAVING (?num_reviews &gt; 1000)
+ORDER BY ?mean_norm_rating
+limit 10</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2021-05-10</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Luca Secchi</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on TAO release 1.0</rdfs:comment>
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

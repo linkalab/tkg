@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-04.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-04.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-04.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1?query=PREFIX%20tao%3A%20%3Chttp%3A%2F%2Fpurl.org%2Ftao%2Fns%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20geo-pos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%0APREFIX%20kgt_td%3A%20%3Chttp%3A%2F%2Ftourism.kg.linkalab-cloud.com%2Ftd%2F%3E%0A%0Aselect%20%3Fdst%20%28%3Fm%20as%20%3Fmentioned_place%29%20%28%3Fc%20as%20%3Ftotal_mentions%29%20%0A%7B%0A%09%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20select%20%3Fdst%20%3Fm%20%28count%28%3Flodge%29%20as%20%3Fc%29%20where%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Flodge%20a%20tao%3ALodgingFacility%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%09tao%3Afeature%20%3Faf%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3Areview%20%3Fr%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tao%3AisContainedInGeo%20%3Fdst%20.%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%09%3Faf%20a%20tao%3ADaySpa%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fr%20schema%3Amentions%20%3Fm%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fm%20a%20geo-pos%3ASpatialThing%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20filter%28%3Fdst%20%3D%20kgt_td%3Alondon%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20group%20by%20%3Fm%20%3Fdst%0A%09%7D%0A%0A%7D%0AORDER%20BY%20DESC%28%3Fc%29%0ALIMIT%2010"/>
+        <testannotationschema:hasCQ xml:lang="en">#CQ4: What are the 10 tourist locations cited most by hotel descriptions that also offer a day Spa in a specific tourist destination?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;sparql xmlns=&apos;http://www.w3.org/2005/sparql-results#&apos;&gt;
+	&lt;head&gt;
+		&lt;variable name=&apos;dst&apos;/&gt;
+		&lt;variable name=&apos;mentioned_place&apos;/&gt;
+		&lt;variable name=&apos;total_mentions&apos;/&gt;
+	&lt;/head&gt;
+	&lt;results&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2643743/&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;1850&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Big_Ben&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;307&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/6618996/&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;212&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/London_Paddington_station&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;186&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/6619910/&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;157&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/London_Waterloo_station&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;156&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2640692/&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;153&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Westminster_Bridge&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;140&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://dbpedia.org/resource/Hyde_Park,_London&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;134&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;mentioned_place&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/6619874/&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;total_mentions&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;118&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+	&lt;/results&gt;
+&lt;/sparql&gt;</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest xml:lang="en">#CQ4: What are the 10 tourist locations cited most by hotel descriptions that also offer a day Spa in a specific tourist destination?
+
+PREFIX tao: &lt;http://purl.org/tao/ns#&gt;
+PREFIX schema: &lt;http://schema.org/&gt;
+PREFIX geo-pos: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+PREFIX kgt_td: &lt;http://tourism.kg.linkalab-cloud.com/td/&gt;
+
+select ?dst (?m as ?mentioned_place) (?c as ?total_mentions) 
+{
+	{
+                select ?dst ?m (count(?lodge) as ?c) where { 
+                ?lodge a tao:LodgingFacility ;
+                       	tao:feature ?af ;
+                        schema:review ?r ;
+                        tao:isContainedInGeo ?dst .      
+            	?af a tao:DaySpa .
+                ?r schema:mentions ?m .
+                ?m a geo-pos:SpatialThing .
+                filter(?dst = kgt_td:london)
+                } group by ?m ?dst
+	}
+
+}
+ORDER BY DESC(?c)
+LIMIT 10</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2021-05-10</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Luca Secchi</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on TAO release 1.0</rdfs:comment>
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

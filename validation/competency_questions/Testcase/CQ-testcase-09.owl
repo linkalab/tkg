@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-09.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-09.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-09.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1?query=PREFIX%20tao%3A%20%3Chttp%3A%2F%2Fpurl.org%2Ftao%2Fns%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20dbo%3A%20%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2F%3E%0APREFIX%20geo-pos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%0A%0Aselect%20%3Fdst%20%3Flodge_citing%20%3Ftot_lodge%20%28%3Flodge_citing%2F%3Ftot_lodge%20as%20%3Fperc%29%20%20where%20%0A%7B%20%20%20%20%0A%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20select%20%3Fdst%20%28count%28distinct%20%3Flodge%29%20as%20%3Flodge_citing%29%20where%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Flodge%20a%20tao%3ALodgingFacility%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tao%3AisContainedInGeo%20%3Fdst%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3Areview%20%3Fr%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fr%20schema%3Amentions%20%3Fm%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3AreviewRating%20%3Frating%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fdst%20a%20tao%3ATouristDestination%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Frating%20tao%3AnormRatingValue%20%3Fnorm_rating%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fm%20a%20dbo%3AFood%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20FILTER%20%28%3Fnorm_rating%20%3E%200.6%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20group%20by%20%3Fdst%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20SELECT%20%3Fdst%20%28COUNT%28%20DISTINCT%20%3Flodge1%29%20AS%20%3Ftot_lodge%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Flodge1%20a%20tao%3ALodgingFacility%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tao%3AisContainedInGeo%20%3Fdst%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fdst%20a%20tao%3ATouristDestination%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%20group%20by%20%3Fdst%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20%0A%7D%20order%20by%20desc%28%3Fperc%29"/>
+        <testannotationschema:hasCQ xml:lang="en">CQ9: What are the top Tourist Destinations with respect to positive sentiment about food (i.e., percentage of Lodging Facilities with positive reviews that cite food)?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;sparql xmlns=&apos;http://www.w3.org/2005/sparql-results#&apos;&gt;
+	&lt;head&gt;
+		&lt;variable name=&apos;dst&apos;/&gt;
+		&lt;variable name=&apos;lodge_citing&apos;/&gt;
+		&lt;variable name=&apos;tot_lodge&apos;/&gt;
+		&lt;variable name=&apos;perc&apos;/&gt;
+	&lt;/head&gt;
+	&lt;results&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/london&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;lodge_citing&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;2458&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;tot_lodge&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;8067&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;perc&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#decimal&apos;&gt;0.304698152968885583240362&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;dst&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/td/sardinia&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;lodge_citing&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;3110&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;tot_lodge&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#integer&apos;&gt;27929&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;perc&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#decimal&apos;&gt;0.111353789967417379784453&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+	&lt;/results&gt;
+&lt;/sparql&gt;</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest># CQ9: What are the top Tourist Destinations with respect to positive sentiment about food (i.e., percentage of Lodging Facilities with positive reviews that cite food)?
+
+PREFIX tao: &lt;http://purl.org/tao/ns#&gt;
+PREFIX schema: &lt;http://schema.org/&gt;
+PREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX geo-pos: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+
+select ?dst ?lodge_citing ?tot_lodge (?lodge_citing/?tot_lodge as ?perc)  where 
+{    
+    { 
+        {
+            select ?dst (count(distinct ?lodge) as ?lodge_citing) where { 
+                ?lodge a tao:LodgingFacility ;
+                       tao:isContainedInGeo ?dst ;
+                       schema:review ?r .
+                ?r schema:mentions ?m ;
+                   schema:reviewRating ?rating .
+                ?dst a tao:TouristDestination .
+                ?rating tao:normRatingValue ?norm_rating .
+                ?m a dbo:Food .
+                FILTER (?norm_rating &gt; 0.6)
+            } group by ?dst
+        } 
+        {
+            SELECT ?dst (COUNT( DISTINCT ?lodge1) AS ?tot_lodge) {
+                ?lodge1 a tao:LodgingFacility ;
+                        tao:isContainedInGeo ?dst .
+                ?dst a tao:TouristDestination .
+            } group by ?dst
+        }
+    } 
+} order by desc(?perc)</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2021-05-10</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Luca Secchi</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on TAO release 1.0</rdfs:comment>
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

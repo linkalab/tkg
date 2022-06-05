@@ -1,0 +1,21 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix schema:   <http://schema.org/> .
+@prefix tao:   <http://purl.org/tao/ns#> .
+
+ex:AccommodationShape
+    a sh:NodeShape ;
+    sh:targetClass tao:NormAggregateRating; # Applies to all lodging aggregated ratings
+    sh:property [              # _:b0
+        sh:path tao:lodgingFacilityReviewed ;       
+        sh:minCount 1 ;
+
+    ] ;
+    sh:closed false ;
+    sh:ignoredProperties ( rdf:type owl:topDataProperty owl:topObjectProperty ) ;
+    .
+ ###### add SHACL vocabulary ###### 

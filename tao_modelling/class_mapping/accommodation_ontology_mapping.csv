@@ -1,0 +1,22 @@
+label,class
+accommodation,Accommodation
+camping pitch,CampingPitch
+room,Room
+hotel room,HotelRoom
+shared room,SharedRoom
+meeting room,MeetingRoom
+non-smoking rooms,Non-SmokingRooms
+family rooms,FamilyRooms
+hypoallergenic room,HypoallergenicRoom
+hypoallergenic,HypoallergenicRoom
+allergy-free room,HypoallergenicRoom
+interconnecting rooms,InterconnectingRooms
+soundproof room,SoundproofRoom
+bridal suite,BridalSuite
+suite,Suite
+guest suite,Suite
+entire palce,EntirePlace
+entire apartment,EntireApartment
+entire house,EntireHouse
+entire boat,EntireBoat
+entire loft,EntireLoft

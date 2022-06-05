@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-07.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-07.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-07.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1?query=PREFIX%20kgt%3A%20%3Chttp%3A%2F%2Ftourism.kg.linkalab.it%2F%3E%0APREFIX%20tao%3A%20%3Chttp%3A%2F%2Fpurl.org%2Ftao%2Fns%23%3E%0APREFIX%20acco%3A%20%3Chttp%3A%2F%2Fpurl.org%2Facco%2Fns%23%3E%0APREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20gr%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fgoodrelations%2Fv1%23%3E%0APREFIX%20gdb-geo%3A%20%3Chttp%3A%2F%2Fwww.ontotext.com%2Fowlim%2Fgeo%23%3E%0APREFIX%20gn%3A%20%3Chttp%3A%2F%2Fwww.geonames.org%2Fontology%23%3E%0A%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Flodge%20%3Fmin_night_price%20WHERE%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20SELECT%20distinct%20%3Flodge%20%28SAMPLE%28%3Flat_1%29%20AS%20%3Flat%29%20%28SAMPLE%28%3Flong_1%29%20AS%20%3Flong%29%20%28MIN%28%3Fnight_price%29%20AS%20%3Fmin_night_price%29%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%23%23%20optimize%20taking%20just%20one%20lodge%20result%20with%20the%20minimum%20nightly%20price%20for%20the%20offered%20accommodation%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20select%20%3Fac%20%3Foffer%20%3Fprice%20%3Fdays%20%3Fcurrency%20%20where%20%7B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Foffer%20gr%3AincludesObject%20%3Fb%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gr%3AhasPriceSpecification%20%3Fprice_spec%20.%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fb%20gr%3AamountOfThisGood%20%3Fdays%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fprice_spec%20gr%3AhasCurrencyValue%20%3Fprice%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gr%3AhasCurrency%20%3Fcurrency%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fb%20gr%3AtypeOfGood%20%3Fac%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fac%20tao%3ApartOf%20%3Flodge%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20a%20tao%3AEntireApartment%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20acco%3Abed%20%3Fbed%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fbed%20acco%3Aquantity%20%3Fnum_beds%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Flodge%20%09a%20%3Ftype_of_lodge%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20tao%3Afeature%20%3Faf%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3Alatitude%20%3Flat_1%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20schema%3Alongitude%20%3Flong_1%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Faf%20a%20tao%3ASecuredParking%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20FILTER%20%28%20%3Fnum_beds%20%3E%201%29%0A%20%20%20%20%20%20%20%20%20%20%20%20FILTER%20%28%20%3Ftype_of_lodge%20%3D%20tao%3AApartment%20%29%0A%20%20%20%20%20%20%20%20%20%20%20%20BIND%20%28%20%28%3Fprice%2F%3Fdays%29%20AS%20%3Fnight_price%29%0A%20%20%20%20%20%20%20%20%7D%20GROUP%20BY%20%3Flodge%0A%20%20%20%20%7D%0A%20%20%20%20%09%0A%20%20%20%20%20%20%20%20SERVICE%20%3Chttp%3A%2F%2Ffactforge.net%2Frepositories%2Fff-news%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Fpark%20%09gdb-geo%3Anearby%28%3Flat%20%3Flong%20%2210km%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%09%09gn%3AfeatureCode%20gn%3AS.AIRP%20.%0A%20%20%20%20%7D%0A%7D%20%0AORDER%20BY%20%3Fmin_night_price%0ALIMIT%2010"/>
+        <testannotationschema:hasCQ xml:lang="en">#CQ7: What are the 10 cheapest apartments that offer at least two beds and a secured parking and are within 10km from an airport?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult xml:lang="it">&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;sparql xmlns=&apos;http://www.w3.org/2005/sparql-results#&apos;&gt;
+	&lt;head&gt;
+		&lt;variable name=&apos;lodge&apos;/&gt;
+		&lt;variable name=&apos;min_night_price&apos;/&gt;
+	&lt;/head&gt;
+	&lt;results&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/f4dd1acbfc859985&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;991.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/a7b379083ab2631b&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;991.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/0b31dcf464575d6c&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;1074.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/a3544532f5dcaf55&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;1083.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/586cad0e0d927cc3&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;1133.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/81c93f6f4b3efc3c&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;1185.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/a767d6268314af08&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;1232.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/d682e3e3f6e06af7&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;1232.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/1ca996e36e17fac4&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;1232.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;lodge&apos;&gt;
+				&lt;uri&gt;http://tourism.kg.linkalab-cloud.com/lf/bkg/4da604833c61f16b&lt;/uri&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;min_night_price&apos;&gt;
+				&lt;literal datatype=&apos;http://www.w3.org/2001/XMLSchema#float&apos;&gt;1234.0&lt;/literal&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+	&lt;/results&gt;
+&lt;/sparql&gt;</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest>#CQ7: What are the 10 cheapest apartments that offer at least two beds and a secured parking and are within 10km from an airport? 
+
+PREFIX kgt: &lt;http://tourism.kg.linkalab.it/&gt;
+PREFIX tao: &lt;http://purl.org/tao/ns#&gt;
+PREFIX acco: &lt;http://purl.org/acco/ns#&gt;
+PREFIX schema: &lt;http://schema.org/&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX gr: &lt;http://purl.org/goodrelations/v1#&gt;
+PREFIX gdb-geo: &lt;http://www.ontotext.com/owlim/geo#&gt;
+PREFIX gn: &lt;http://www.geonames.org/ontology#&gt;
+
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?lodge ?min_night_price WHERE
+    {
+        {
+        SELECT distinct ?lodge (SAMPLE(?lat_1) AS ?lat) (SAMPLE(?long_1) AS ?long) (MIN(?night_price) AS ?min_night_price) { 
+            ## optimize taking just one lodge result with the minimum nightly price for the offered accommodation
+            {
+                select ?ac ?offer ?price ?days ?currency  where { 
+                    ?offer gr:includesObject ?b ;
+                           gr:hasPriceSpecification ?price_spec .    
+                    ?b gr:amountOfThisGood ?days .
+                    ?price_spec gr:hasCurrencyValue ?price ;
+                                gr:hasCurrency ?currency .
+                    ?b gr:typeOfGood ?ac .
+                }
+            }
+
+
+            ?ac tao:partOf ?lodge ;
+                a tao:EntireApartment ;
+                acco:bed ?bed .
+            ?bed acco:quantity ?num_beds .
+            ?lodge 	a ?type_of_lodge ;
+                    tao:feature ?af ;
+                    schema:latitude ?lat_1 ;
+                    schema:longitude ?long_1 .
+            ?af a tao:SecuredParking .
+            FILTER ( ?num_beds &gt; 1)
+            FILTER ( ?type_of_lodge = tao:Apartment )
+            BIND ( (?price/?days) AS ?night_price)
+        } GROUP BY ?lodge
+    }
+    	
+        SERVICE &lt;http://factforge.net/repositories/ff-news&gt; {
+            ?park 	gdb-geo:nearby(?lat ?long &quot;10km&quot;);
+            		gn:featureCode gn:S.AIRP .
+    }
+} 
+ORDER BY ?min_night_price
+LIMIT 10</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2021-05-10</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Luca Secchi</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on TAO release 1.0</rdfs:comment>
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

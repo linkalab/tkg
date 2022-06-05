@@ -1,0 +1,3479 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#"
+     xml:base="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+
+    <owl:Ontology rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#">
+
+        <dcterms:creator xml:lang="en">Unknown</dcterms:creator>
+     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#belongsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:range rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasCategory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:range rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasCountryOfOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasCountryOfOrigin">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasCountryOfOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Country"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasDistanceTo -->
+
+    <owl:ObjectProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasDistanceTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+        <rdfs:range rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasLaundry -->
+
+    <owl:ObjectProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasLaundry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+        <rdfs:range rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Laundry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasPostalAddress -->
+
+    <owl:ObjectProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasPostalAddress">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+        <rdfs:range rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Address"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasRoom -->
+
+    <owl:ObjectProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasRoom">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:range rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <rdfs:range rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#offersMeetingFacility -->
+
+    <owl:ObjectProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#offersMeetingFacility">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:range rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meeting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#creditCardAccepted -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#creditCardAccepted">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasAirConditioner -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasAirConditioner">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasBaggageRoom -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasBaggageRoom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasBalcony -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasBalcony"/>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasBed -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasBed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasCongressFacility -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasCongressFacility"/>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasContactData -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasContactData"/>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasDecor -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasDecor"/>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasEMail -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasEMail">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasFitnessRoom -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasFitnessRoom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasFridge -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasFridge"/>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasHandicapAccessibility -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasHandicapAccessibility">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+        <rdfs:label xml:lang="en">Access for disabled</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasInternetAccess -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasInternetAccess">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasLaundryService -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasLaundryService"/>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasLift -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasLift">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">hasElevator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasOneNightPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasOneNightPrice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasOpeningHours -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasOpeningHours">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasParking -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasParking">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasPlugSockets -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasPlugSockets"/>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasRating -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasRating">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasSafe -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasSafe">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasTVSet -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasTVSet">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasTelephoneRoom -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasTelephoneRoom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasWebsite -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasWebsite">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasWiFi -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasWiFi">
+        <rdfs:subPropertyOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#hasInternetAccess"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#offersChildCare -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#offersChildCare">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:label xml:lang="en">offerBabySitter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#offersCrib -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#offersCrib">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">offerCot</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#offersShuttleService -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#offersShuttleService">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#openFromTo -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#openFromTo">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#petsAllowed -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#petsAllowed">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#spokenLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#spokenLanguage">
+        <rdfs:domain rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality"/>
+        <rdfs:label xml:lang="en">hasMultilingualStaff</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Botel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Botel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <rdfs:comment xml:lang="en">Boat Hotel</rdfs:comment>
+        <rdfs:label xml:lang="es">Hotel Flotante</rdfs:label>
+        <rdfs:label xml:lang="pt">Hotel Flutuante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BungalowAndCamping -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BungalowAndCamping">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <rdfs:label xml:lang="pt">Bangalô e Campismo</rdfs:label>
+        <rdfs:label xml:lang="es">Bungalow</rdfs:label>
+        <rdfs:label xml:lang="es">Bungalow y campamento</rdfs:label>
+        <rdfs:label xml:lang="es">Cabañas</rdfs:label>
+        <rdfs:label xml:lang="es">Campamento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Golf -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Golf">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:label xml:lang="es">Golf</rdfs:label>
+        <rdfs:label xml:lang="pt">Golfe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation">
+        <rdfs:label xml:lang="es">Accomodación</rdfs:label>
+        <rdfs:label xml:lang="pt">Acomodação</rdfs:label>
+        <rdfs:label xml:lang="pt">Alojamento</rdfs:label>
+        <rdfs:label xml:lang="fr">Hébergement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Adagio -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Adagio">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Address -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Address">
+        <owl:equivalentClass rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Location"/>
+        <rdfs:label xml:lang="fr">Adresse</rdfs:label>
+        <rdfs:label xml:lang="es">Dirección</rdfs:label>
+        <rdfs:label xml:lang="pt">Endereço</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Localização</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Administration -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Administration">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="es">Administración</rdfs:label>
+        <rdfs:label xml:lang="pt">Gerência</rdfs:label>
+        <rdfs:label xml:lang="en">Management</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AirConditioning -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AirConditioning">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="en">AC</rdfs:label>
+        <rdfs:label xml:lang="en">AirCon</rdfs:label>
+        <rdfs:label xml:lang="es">Aire acondicionado</rdfs:label>
+        <rdfs:label xml:lang="pt">Ar-condicionado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Airport -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Airport">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="pt">Aeroporto</rdfs:label>
+        <rdfs:label xml:lang="es">Aeropuerto</rdfs:label>
+        <rdfs:label xml:lang="fr">Aéroport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AirportShuttle -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AirportShuttle">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Transporte del aeropuerto</rdfs:label>
+        <rdfs:label xml:lang="pt">Transporte para o Aeroporto</rdfs:label>
+        <rdfs:label xml:lang="es">Traslado al aeropuerto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AllSeasons -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AllSeasons">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Animator -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Animator">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="es">Animador</rdfs:label>
+        <rdfs:label xml:lang="pt">Animador</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Apartment -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Apartment">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BedAndBreakfast"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestHouse"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HolidaySettlement"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostal"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Inn"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension"/>
+        <rdfs:label xml:lang="es">Apartamento</rdfs:label>
+        <rdfs:label xml:lang="pt">Apartamento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Room"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <rdfs:label xml:lang="pt">Tipos de Quarto em Apartamentos</rdfs:label>
+        <rdfs:label xml:lang="es">Tipos de habitación en apartamentos</rdfs:label>
+        <rdfs:label xml:lang="es">Tipos de habitación en pisos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Arena -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Arena">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Arena</rdfs:label>
+        <rdfs:label xml:lang="pt">Arena</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Babysitting -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Babysitting">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="pt">Babá</rdfs:label>
+        <rdfs:label xml:lang="es">Niñera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Balance -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Balance">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="pt">Balança</rdfs:label>
+        <rdfs:label xml:lang="fr">Bascule</rdfs:label>
+        <rdfs:label xml:lang="es">Báscula</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Ballroom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Ballroom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Salão de Baile</rdfs:label>
+        <rdfs:label xml:lang="pt">Salão de Festas</rdfs:label>
+        <rdfs:label xml:lang="es">Salón de baile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BarPrice -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BarPrice">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price"/>
+        <rdfs:label xml:lang="es">Precio del bar</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Bar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BarStaff -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BarStaff">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="pt">Funcionários do Bar</rdfs:label>
+        <rdfs:label xml:lang="es">Personal del bar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRobes -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRobes">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="pt">Roupão</rdfs:label>
+        <rdfs:label xml:lang="pt">Roupões</rdfs:label>
+        <rdfs:label xml:lang="es">Túnica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility"/>
+        <rdfs:label xml:lang="pt">Facilidades da Casa de Banho</rdfs:label>
+        <rdfs:label xml:lang="pt">Facilidades do banheiro</rdfs:label>
+        <rdfs:label xml:lang="es">Instalaciones de baño</rdfs:label>
+        <rdfs:label xml:lang="es">Instalaciones de cuarto de baño</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Bathroom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Bathroom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Banheiro</rdfs:label>
+        <rdfs:label xml:lang="pt">Casa de Banho</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Bathtub -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Bathtub">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="pt">Banheira</rdfs:label>
+        <rdfs:label xml:lang="en">Bath</rdfs:label>
+        <rdfs:label xml:lang="es">Bañera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Beach -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Beach">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Playa</rdfs:label>
+        <rdfs:label xml:lang="pt">Praia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BeautySalon -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BeautySalon">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="fr">Salon de beauté</rdfs:label>
+        <rdfs:label xml:lang="pt">Salão de beleza</rdfs:label>
+        <rdfs:label xml:lang="es">Salón de belleza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Bed -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Bed">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Cama</rdfs:label>
+        <rdfs:label xml:lang="pt">Cama</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BedAndBreakfast -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BedAndBreakfast">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestHouse"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HolidaySettlement"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostal"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Inn"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension"/>
+        <rdfs:comment>It is a small lodging establishment that offers overnight accommodation and breakfast, but usually does not offer other meals. Typically, bed and breakfasts are private homes with fewer than 10 bedrooms available for commercial use.
+In Austria is also denominated Hotel Garni.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Cama e café da manhã</rdfs:label>
+        <rdfs:label xml:lang="es">Cama y desayuno</rdfs:label>
+        <rdfs:label xml:lang="fr">Lit et petit déjeuner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BestWesternHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BestWesternHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BicycleRental -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BicycleRental">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Alquiler de bicicletas</rdfs:label>
+        <rdfs:label xml:lang="es">Alquiler de bicis</rdfs:label>
+        <rdfs:label xml:lang="pt">Aluguel de Bicicletas</rdfs:label>
+        <rdfs:label xml:lang="pt">Aluguer de Bicicletas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Breakfast -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Breakfast">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meal"/>
+        <rdfs:label xml:lang="pt">Café da Manhã</rdfs:label>
+        <rdfs:label xml:lang="es">Desayuno</rdfs:label>
+        <rdfs:label xml:lang="pt">Pequeno Almoço</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BreakfastPrice -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BreakfastPrice">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price"/>
+        <rdfs:label xml:lang="es">Precio del desayuno</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Café da Manhã</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Pequeno Almoço</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BunkerHotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BunkerHotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:comment>The Null Stern Hotel in Teufen, Appenzellerland, Switzerland and the Concrete Mushrooms in Albania are former nuclear bunkers transformed into hotels.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Bunker Hôtel</rdfs:label>
+        <rdfs:label xml:lang="pt">Hotel Casamata</rdfs:label>
+        <rdfs:label xml:lang="es">Hotel búnker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BusStation -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BusStation">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Estación de autobus</rdfs:label>
+        <rdfs:label xml:lang="pt">Estação de Autocarros</rdfs:label>
+        <rdfs:label xml:lang="pt">Estação de Ônibus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BusStop -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BusStop">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Parada de autobús</rdfs:label>
+        <rdfs:label xml:lang="pt">Parada de Ônibus</rdfs:label>
+        <rdfs:label xml:lang="pt">Paragem de Autocarros</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BusinessTraveller -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BusinessTraveller">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Co-worker"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Couple"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Family"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GroupOfFriends"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IndividualTraveller"/>
+        <rdfs:label xml:lang="pt">Viajante de Negócios</rdfs:label>
+        <rdfs:label xml:lang="es">Viajero de negocios</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CapsuleHotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CapsuleHotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:comment>Capsule hotels are a type of economical hotel that are found in Japan, where people sleep in stacks of rectangular containers.</rdfs:comment>
+        <rdfs:label xml:lang="es">Hotel cápsula</rdfs:label>
+        <rdfs:label xml:lang="pt">Hotel cápsula</rdfs:label>
+        <rdfs:label xml:lang="fr">Hôtel capsule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CarRental -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CarRental">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Alquiler de coches</rdfs:label>
+        <rdfs:label xml:lang="pt">Aluguel de Veículos</rdfs:label>
+        <rdfs:label xml:lang="pt">Aluguer de Veículos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Carpet -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Carpet">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Alcatifa</rdfs:label>
+        <rdfs:label xml:lang="es">Alfombra</rdfs:label>
+        <rdfs:label xml:lang="pt">Carpete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Casino -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Casino">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Casino</rdfs:label>
+        <rdfs:label xml:lang="fr">Casino</rdfs:label>
+        <rdfs:label xml:lang="pt">Cassino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CaveHotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CaveHotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:comment>Desert Cave Hotel in Coober Pedy, South Australia and the Cuevas Pedro Antonio de Alarcón (named after the author) in Guadix, Spain, as well as several hotels in Cappadocia, Turkey, are notable for being built into natural cave formations, some with rooms underground.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Hotel adega</rdfs:label>
+        <rdfs:label xml:lang="es">Hotel bodega</rdfs:label>
+        <rdfs:label xml:lang="fr">Hôtel cave</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CheckinService -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CheckinService">
+        <owl:equivalentClass rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Reception"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Recepción</rdfs:label>
+        <rdfs:label xml:lang="en">Reception</rdfs:label>
+        <rdfs:label xml:lang="pt">Recepção</rdfs:label>
+        <rdfs:label xml:lang="es">Servicio de salida</rdfs:label>
+        <rdfs:label xml:lang="pt">Serviço de Check In</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CheckoutService -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CheckoutService">
+        <owl:equivalentClass rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Reception"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Servicio de salida</rdfs:label>
+        <rdfs:label xml:lang="pt">Serviço de Check Out</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ChoiceHotelsInternational -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ChoiceHotelsInternational">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Church -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Church">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Iglesia</rdfs:label>
+        <rdfs:label xml:lang="pt">Igreja</rdfs:label>
+        <rdfs:label xml:lang="fr">Église</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#City -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#City">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Location"/>
+        <rdfs:label xml:lang="pt">Cidade</rdfs:label>
+        <rdfs:label xml:lang="es">Ciudad</rdfs:label>
+        <rdfs:label xml:lang="fr">Ville</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CleaningStaff -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CleaningStaff">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="pt">Funcionários da Limpeza</rdfs:label>
+        <rdfs:label xml:lang="es">Personal de limpieza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Co-worker -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Co-worker">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType"/>
+        <rdfs:label xml:lang="pt">Colega de Trabalho</rdfs:label>
+        <rdfs:label xml:lang="es">Compañero de trabajo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CoffeeMachine -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CoffeeMachine">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Cafetera</rdfs:label>
+        <rdfs:label xml:lang="pt">Máquina de Café</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CoffeePrice -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CoffeePrice">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price"/>
+        <rdfs:label xml:lang="es">Precio del café</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Café</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Comfort -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Comfort">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FirstClass"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Luxury"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Standard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorComfort"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorFirstClass"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorLuxury"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="es">Comodidad</rdfs:label>
+        <rdfs:label xml:lang="fr">Confort</rdfs:label>
+        <rdfs:label xml:lang="pt">Conforto</rdfs:label>
+        <rdfs:label xml:lang="en">Three Star</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ConciergeService -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ConciergeService">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="pt">Porteiro</rdfs:label>
+        <rdfs:label xml:lang="es">Portero</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ConferenceRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ConferenceRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Sala de Conferências</rdfs:label>
+        <rdfs:label xml:lang="es">Sala de conferencias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ConfortDoubleRoomWithSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ConfortDoubleRoomWithSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoom"/>
+        <rdfs:label xml:lang="es">Habitación doble confort con vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Cot -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Cot">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Berço</rdfs:label>
+        <rdfs:label xml:lang="es">Cuna</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CotPrice -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CotPrice">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price"/>
+        <rdfs:label xml:lang="es">Precio de la cuna</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Berço</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Country -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Country">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Location"/>
+        <rdfs:label xml:lang="fr">Pays</rdfs:label>
+        <rdfs:label xml:lang="es">País</rdfs:label>
+        <rdfs:label xml:lang="pt">País</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Couple -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Couple">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType"/>
+        <rdfs:label xml:lang="pt">Casal</rdfs:label>
+        <rdfs:label xml:lang="es">Pareja</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CurrencyExchange -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#CurrencyExchange">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Servicio de cambio de dinero</rdfs:label>
+        <rdfs:label xml:lang="pt">Serviço de Câmbio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Curtain -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Curtain">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Cortina</rdfs:label>
+        <rdfs:label xml:lang="pt">Cortina</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeDoubleRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeDoubleRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="es">Habitación doble de lujo</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Duplo de Luxo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeDoubleRoomWithSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeDoubleRoomWithSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeRoom"/>
+        <rdfs:label xml:lang="es">Habitación doble de lujo con vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeFamilyRoomWithSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeFamilyRoomWithSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeRoom"/>
+        <rdfs:label xml:lang="es">Habitación familiar de lujo con vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SingleRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#StandardRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Suite"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TripleRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="fr">Chambre de luxe</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación de lujo</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto de luxo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeTwinRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DeluxeTwinRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="es">Habitación doble de lujo</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Twin de Luxo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Design -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Design">
+        <rdfs:label xml:lang="es">Apariencia</rdfs:label>
+        <rdfs:label xml:lang="pt">Aparência</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Dinner -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Dinner">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meal"/>
+        <rdfs:label xml:lang="es">Cena</rdfs:label>
+        <rdfs:label xml:lang="pt">Jantar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DisabledAccess -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DisabledAccess">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility"/>
+        <rdfs:label xml:lang="es">Acesso a silla de ruedas</rdfs:label>
+        <rdfs:label xml:lang="pt">Acesso para Deficientes</rdfs:label>
+        <rdfs:label xml:lang="en">WheelChair Accessible</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Disco -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Disco">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Discoteca</rdfs:label>
+        <rdfs:label xml:lang="pt">Discoteca</rdfs:label>
+        <rdfs:label xml:lang="fr">Discoteque</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DominaHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DominaHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Doorman -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Doorman">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="pt">Porteiro</rdfs:label>
+        <rdfs:label xml:lang="es">Portero</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SingleRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#StandardRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Suite"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TripleRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="fr">Chambre double</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación para pareja</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto de casal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoomWithLandView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoomWithLandView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoom"/>
+        <rdfs:label xml:lang="es">Habitación doble con vistas de la campiña</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoomWithPoolView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoomWithPoolView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoom"/>
+        <rdfs:label xml:lang="es">Habitación doble con vistas de la pisicina</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoomWithSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoomWithSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoom"/>
+        <rdfs:label xml:lang="es">Habitación doble con vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Downtown -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Downtown">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="fr">Centre ville</rdfs:label>
+        <rdfs:label xml:lang="pt">Centro da cidade</rdfs:label>
+        <rdfs:label xml:lang="es">Centro de la ciudad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Driver -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Driver">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility"/>
+        <rdfs:label xml:lang="es">Conductor</rdfs:label>
+        <rdfs:label xml:lang="pt">Motorista</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DrycleaningService -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DrycleaningService">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Servicio de limpieza en seco</rdfs:label>
+        <rdfs:label xml:lang="pt">Serviço de Limpeza a Seco</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Dryer -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Dryer">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="es">Secador</rdfs:label>
+        <rdfs:label xml:lang="pt">Secador</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#EletricKettle -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#EletricKettle">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Kettle"/>
+        <rdfs:label xml:lang="es">Hervidor eléctrico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Elevator -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Elevator">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Ascensor</rdfs:label>
+        <rdfs:label xml:lang="pt">Elevador</rdfs:label>
+        <rdfs:label xml:lang="en">Lift</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#EtapHotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#EtapHotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExtendedFamily -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExtendedFamily">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Family"/>
+        <rdfs:label xml:lang="es">Familia numerosa</rdfs:label>
+        <rdfs:label xml:lang="pt">Família Grande</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExteriorJacuzzi -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExteriorJacuzzi">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:label xml:lang="pt">Jacuzzi Exterior</rdfs:label>
+        <rdfs:label xml:lang="es">Jacuzzi al aire libre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility"/>
+        <rdfs:label xml:lang="fr">Facilité externe</rdfs:label>
+        <rdfs:label xml:lang="es">Instalación externa</rdfs:label>
+        <rdfs:label xml:lang="pt">Instalação externa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility">
+        <rdfs:label xml:lang="pt">Facilidade</rdfs:label>
+        <rdfs:label xml:lang="fr">Facilité</rdfs:label>
+        <rdfs:label xml:lang="es">Instalaciónes</rdfs:label>
+        <rdfs:label xml:lang="pt">Instalações</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FairmontHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FairmontHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Family -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Family">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GroupOfFriends"/>
+        <rdfs:label xml:lang="es">Familia</rdfs:label>
+        <rdfs:label xml:lang="pt">Família</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyJuniorSuiteWithSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyJuniorSuiteWithSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyRoom"/>
+        <rdfs:label xml:lang="pt">Suite Familiar Júnior com Vista para o Mar</rdfs:label>
+        <rdfs:label xml:lang="es">Suite familiar junior con vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <rdfs:label xml:lang="es">Habitación familiar</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Familiar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyRoomWithBalcony -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyRoomWithBalcony">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyRoom"/>
+        <rdfs:label xml:lang="es">Habitación familiar con balcón</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Familiar Com Sacada</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Familiar com Varanda</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilySuiteWithSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilySuiteWithSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyRoom"/>
+        <rdfs:label xml:lang="pt">Suite Familiar com Vista para o Mar</rdfs:label>
+        <rdfs:label xml:lang="es">Suite familiar con vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyWithOlderChildren -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyWithOlderChildren">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Family"/>
+        <rdfs:label xml:lang="es">Familia con hijos más viejos</rdfs:label>
+        <rdfs:label xml:lang="es">Familia con niños mayores</rdfs:label>
+        <rdfs:label xml:lang="pt">Família com Filhos Mais Velhos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyWithYoungChildren -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FamilyWithYoungChildren">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Family"/>
+        <rdfs:label xml:lang="es">Familia con hijos más jovens</rdfs:label>
+        <rdfs:label xml:lang="es">Familia con niños más pequeños</rdfs:label>
+        <rdfs:label xml:lang="pt">Família com Filhos Mais Jovens</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FirstClass -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FirstClass">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Luxury"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Standard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorComfort"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorFirstClass"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorLuxury"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="en">Four Star</rdfs:label>
+        <rdfs:label xml:lang="fr">Première Class</rdfs:label>
+        <rdfs:label xml:lang="pt">Primeira Classe</rdfs:label>
+        <rdfs:label xml:lang="es">Primera clase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FitnessCenter -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#FitnessCenter">
+        <owl:equivalentClass rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Gym"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentre"/>
+        <rdfs:label xml:lang="es">Gimnasio</rdfs:label>
+        <rdfs:label xml:lang="pt">Ginásio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Formula1 -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Formula1">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GameRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GameRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Sala de Jogos</rdfs:label>
+        <rdfs:label xml:lang="es">Sala de juegos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Garden -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Garden">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:label xml:lang="pt">Jardim</rdfs:label>
+        <rdfs:label xml:lang="fr">Jardin</rdfs:label>
+        <rdfs:label xml:lang="es">Jardín</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Gardens -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Gardens">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Jardins</rdfs:label>
+        <rdfs:label xml:lang="fr">Jardins</rdfs:label>
+        <rdfs:label xml:lang="pt">Jardins</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GroupOfFriends -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GroupOfFriends">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType"/>
+        <rdfs:label xml:lang="pt">Grupo de Amigos</rdfs:label>
+        <rdfs:label xml:lang="es">Grupo de amigos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Guest-chosenDailyNewspaperDelivery -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Guest-chosenDailyNewspaperDelivery">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Periódico elegido por el cliente</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestHouse -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestHouse">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <rdfs:label xml:lang="pt">Casa de Hóspedes</rdfs:label>
+        <rdfs:label xml:lang="es">Casa de huéspedes</rdfs:label>
+        <rdfs:label xml:lang="en">GuestRoom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType">
+        <rdfs:label xml:lang="pt">Tipo de Hóspede</rdfs:label>
+        <rdfs:label xml:lang="es">Tipo de cliente</rdfs:label>
+        <rdfs:label xml:lang="es">Tipo de invitado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Gym -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Gym">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentre"/>
+        <rdfs:label xml:lang="pt">Ginásio</rdfs:label>
+        <rdfs:label xml:lang="fr">Gym</rdfs:label>
+        <rdfs:label xml:lang="pt">Sala de ginástica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hairdresser -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hairdresser">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Cabeleireiro</rdfs:label>
+        <rdfs:label xml:lang="fr">Coiffeur</rdfs:label>
+        <rdfs:label xml:lang="es">Peluquero</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hallway -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hallway">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Corredor</rdfs:label>
+        <rdfs:label xml:lang="en">Hall</rdfs:label>
+        <rdfs:label xml:lang="es">Pasillo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hanger -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hanger">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Cabide</rdfs:label>
+        <rdfs:label xml:lang="es">Percha</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HeatingSystem -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HeatingSystem">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Sistema de Aquecimento</rdfs:label>
+        <rdfs:label xml:lang="es">Sistema de calefacción</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HiltonHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HiltonHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HistoricBuilding -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HistoricBuilding">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Construcción histórica</rdfs:label>
+        <rdfs:label xml:lang="pt">Construção Histórica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HistoricCentre -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HistoricCentre">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="fr">Centre historique</rdfs:label>
+        <rdfs:label xml:lang="es">Centro histórico</rdfs:label>
+        <rdfs:label xml:lang="pt">Centro histórico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HolidaySettlement -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HolidaySettlement">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostal"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality"/>
+        <rdfs:label xml:lang="pt">Alojamento de Férias</rdfs:label>
+        <rdfs:label xml:lang="es">Alojamiento</rdfs:label>
+        <rdfs:label xml:lang="es">Alojamiento de vacaciones</rdfs:label>
+        <rdfs:label xml:lang="en">HolidayAccommodation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HoneymoonSuite -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HoneymoonSuite">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Habitación noche de bodas</rdfs:label>
+        <rdfs:label xml:lang="pt">Suite para Lua-de-mel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hospitality">
+        <rdfs:label xml:lang="es">Hospitalidad</rdfs:label>
+        <rdfs:label xml:lang="pt">Hospitalidade</rdfs:label>
+        <rdfs:label xml:lang="fr">Hospitalité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostal -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostal">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality"/>
+        <rdfs:comment xml:lang="en">A type of family-run pension typically common only in Spain and a few other Spanish-speaking countries.</rdfs:comment>
+        <rdfs:label xml:lang="es">Hostal</rdfs:label>
+        <rdfs:label xml:lang="pt">Hostal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hostel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Inn"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension"/>
+        <rdfs:comment xml:lang="en">Properties that offer shared accommodation, typically in dormitories.</rdfs:comment>
+        <rdfs:label xml:lang="es">Albergue</rdfs:label>
+        <rdfs:label xml:lang="pt">Albergue</rdfs:label>
+        <rdfs:label xml:lang="fr">Auberge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Room"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <rdfs:label xml:lang="fr">Chambre d&apos;auberge</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación de albergue</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto de albergue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Inn"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension"/>
+        <rdfs:label xml:lang="es">Hotel</rdfs:label>
+        <rdfs:label xml:lang="pt">Hotel</rdfs:label>
+        <rdfs:label xml:lang="fr">Hôtel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory">
+        <rdfs:label xml:lang="pt">Categorias de Hotéis</rdfs:label>
+        <rdfs:label xml:lang="es">Categoría de hoteles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="fr">Chaîne d&apos;hôtel</rdfs:label>
+        <rdfs:label xml:lang="es">Red de hoteles</rdfs:label>
+        <rdfs:label xml:lang="pt">Rede de hotéis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelF1 -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelF1">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Room"/>
+        <rdfs:label xml:lang="fr">Chambre d&apos;hôtel</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación de hotel</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto de hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HouseKeeping -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HouseKeeping">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Servicio de limpieza</rdfs:label>
+        <rdfs:label xml:lang="pt">Serviço de Limpeza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HyattHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HyattHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HydromassageJacuzzi -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HydromassageJacuzzi">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentre"/>
+        <rdfs:label xml:lang="es">Baño remolino</rdfs:label>
+        <rdfs:label xml:lang="es">Hidromasaje</rdfs:label>
+        <rdfs:label xml:lang="pt">Hidromassagem</rdfs:label>
+        <rdfs:label xml:lang="fr">Hydromassage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HygieneProducts -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HygieneProducts">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="es">Productos de higiene</rdfs:label>
+        <rdfs:label xml:lang="pt">Produtos de Higiene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IberostarHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IberostarHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Ibis -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Ibis">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IceHotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IceHotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:comment>The Ice Hotel in Jukkasjärvi, Sweden, and the Hotel de Glace in Duschenay, Canada, melt every spring and are rebuilt each winter; the Mammut Snow Hotel in Finland is located within the walls of the Kemi snow castle; and the Lainio Snow Hotel is part of a snow village near Ylläs, Finland.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Hotel de gelo</rdfs:label>
+        <rdfs:label xml:lang="es">Hotel de hielo</rdfs:label>
+        <rdfs:label xml:lang="fr">Hôtel de glace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#In-roomBreakfast -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#In-roomBreakfast">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="pt">Café da Manhã no Quarto</rdfs:label>
+        <rdfs:label xml:lang="es">Desayuno en la habitación</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IndividualTraveller -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IndividualTraveller">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GuestType"/>
+        <rdfs:label xml:lang="pt">Viajante Sozinho</rdfs:label>
+        <rdfs:label xml:lang="es">Viajero solo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IndoorSwimmingPool -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IndoorSwimmingPool">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OutdoorSwimmingPool"/>
+        <rdfs:label xml:lang="en">HeatedSwimmingPool</rdfs:label>
+        <rdfs:label xml:lang="pt">Piscina coberta</rdfs:label>
+        <rdfs:label xml:lang="es">Piscina cubierta</rdfs:label>
+        <rdfs:label xml:lang="fr">Piscine couverte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IndoorSwimmingPoolTimetable -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IndoorSwimmingPoolTimetable">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Timetable"/>
+        <rdfs:label xml:lang="es">Horario de la piscina cubierta</rdfs:label>
+        <rdfs:label xml:lang="pt">Horário da Piscina Coberta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Inn -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Inn">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension"/>
+        <rdfs:label xml:lang="fr">?</rdfs:label>
+        <rdfs:label xml:lang="es">Posada</rdfs:label>
+        <rdfs:label xml:lang="pt">Pousada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility"/>
+        <rdfs:label xml:lang="fr">Facilité interne</rdfs:label>
+        <rdfs:label xml:lang="es">Instalaciones interiores</rdfs:label>
+        <rdfs:label xml:lang="pt">Instalação interna</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternetAccess -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternetAccess">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Acceso a internet</rdfs:label>
+        <rdfs:label xml:lang="pt">Acesso à Internet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternetPrice -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternetPrice">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price"/>
+        <rdfs:label xml:lang="es">Precio de la internet</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço da Internet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Iron -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Iron">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Ferro de Engomar</rdfs:label>
+        <rdfs:label xml:lang="pt">Ferro de Passar Roupa</rdfs:label>
+        <rdfs:label xml:lang="es">Plancha</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IroningBoard -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IroningBoard">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Mesa de Passar Roupa</rdfs:label>
+        <rdfs:label xml:lang="es">Tabla para planchar ropa</rdfs:label>
+        <rdfs:label xml:lang="pt">Táboa de Engomar</rdfs:label>
+        <rdfs:label xml:lang="pt">Táboa de Passar Roupa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#JuniorSuite -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#JuniorSuite">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Suite"/>
+        <rdfs:label xml:lang="es">Suite junior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#JuniorSuiteWithFrontalSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#JuniorSuiteWithFrontalSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#JuniorSuite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#JuniorSuiteWithSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#JuniorSuiteWithSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#JuniorSuite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Kettle -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Kettle">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Chaleira</rdfs:label>
+        <rdfs:label xml:lang="es">Hervidor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#KidsClub -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#KidsClub">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Club para niños</rdfs:label>
+        <rdfs:label xml:lang="fr">Club pour les enfants</rdfs:label>
+        <rdfs:label xml:lang="pt">Clube para crianças</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Kitchen -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Cocina</rdfs:label>
+        <rdfs:label xml:lang="pt">Cozinha</rdfs:label>
+        <rdfs:label xml:lang="en">Cuisine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#KitchenStaff -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#KitchenStaff">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="pt">Funcionários da Cozinha</rdfs:label>
+        <rdfs:label xml:lang="es">Personal de cocina</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Lamp -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Lamp">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Candeeiro</rdfs:label>
+        <rdfs:label xml:lang="es">Lámpara</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Laundry -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Laundry">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="fr">Blanchisserie</rdfs:label>
+        <rdfs:label xml:lang="pt">Lavanderia</rdfs:label>
+        <rdfs:label xml:lang="es">Lavandería</rdfs:label>
+        <rdfs:label xml:lang="fr">Pressing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LaundryRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LaundryRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Laundry"/>
+        <rdfs:label xml:lang="es">Cuarto de lavado</rdfs:label>
+        <rdfs:label xml:lang="pt">Sala de lavanderia</rdfs:label>
+        <rdfs:label xml:lang="fr">Sale de blanchisserie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LaundryService -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LaundryService">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Laundry"/>
+        <rdfs:label xml:lang="fr">Service de blanchisserie</rdfs:label>
+        <rdfs:label xml:lang="es">Servicios de lavandería</rdfs:label>
+        <rdfs:label xml:lang="pt">Serviço de lavanderia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LeisureStaff -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LeisureStaff">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="pt">Funcionários da Área de Lazer</rdfs:label>
+        <rdfs:label xml:lang="es">Personal de la área de recreación</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Location -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Location">
+        <rdfs:label xml:lang="es">Dirección</rdfs:label>
+        <rdfs:label xml:lang="pt">Endereço</rdfs:label>
+        <rdfs:label xml:lang="pt">Morada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LuggageRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LuggageRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Sala de Malas</rdfs:label>
+        <rdfs:label xml:lang="es">Sala de maletas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Lunch -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Lunch">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meal"/>
+        <rdfs:label xml:lang="pt">Almoço</rdfs:label>
+        <rdfs:label xml:lang="es">Almuerzo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Luxury -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Luxury">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Standard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorComfort"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorFirstClass"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorLuxury"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="en">Five Star</rdfs:label>
+        <rdfs:label xml:lang="es">Lujo</rdfs:label>
+        <rdfs:label xml:lang="fr">Luxe</rdfs:label>
+        <rdfs:label xml:lang="pt">Luxo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LuxuryApartment -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#LuxuryApartment">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="pt">Apartamento de Luxo</rdfs:label>
+        <rdfs:label xml:lang="es">Apartamento de lujo</rdfs:label>
+        <rdfs:label xml:lang="es">Piso de lujo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MGallery -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MGallery">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ManualKettle -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ManualKettle">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Kettle"/>
+        <rdfs:label xml:lang="es">Hervidor manual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MarriottHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MarriottHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Massage -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Massage">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentre"/>
+        <rdfs:label xml:lang="es">Masaje</rdfs:label>
+        <rdfs:label xml:lang="pt">Massagem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Mattress -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Mattress">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Colchão</rdfs:label>
+        <rdfs:label xml:lang="es">Colchón</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MatureCouple -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MatureCouple">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Couple"/>
+        <rdfs:label xml:lang="pt">Casal Maduro</rdfs:label>
+        <rdfs:label xml:lang="es">Pareja madura</rdfs:label>
+        <rdfs:label xml:lang="es">Pareja vieja</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meal -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meal">
+        <rdfs:label xml:lang="es">Comida</rdfs:label>
+        <rdfs:label xml:lang="pt">Refeição</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meeting -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meeting">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Reunião</rdfs:label>
+        <rdfs:label xml:lang="es">Reunión</rdfs:label>
+        <rdfs:label xml:lang="fr">Réunion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MeetingLounge -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MeetingLounge">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meeting"/>
+        <rdfs:label xml:lang="es">Sala de reuniones</rdfs:label>
+        <rdfs:label xml:lang="pt">Sala de reunião</rdfs:label>
+        <rdfs:label xml:lang="fr">Salle de réunion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MeetingRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#MeetingRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Meeting"/>
+        <rdfs:label xml:lang="es">?</rdfs:label>
+        <rdfs:label xml:lang="fr">?</rdfs:label>
+        <rdfs:label xml:lang="pt">?</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Mercure -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Mercure">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Mirror -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Mirror">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Espejo</rdfs:label>
+        <rdfs:label xml:lang="pt">Espelho</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Monument -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Monument">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="fr">Monument</rdfs:label>
+        <rdfs:label xml:lang="es">Monumento</rdfs:label>
+        <rdfs:label xml:lang="pt">Monumento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Motel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension"/>
+        <rdfs:label xml:lang="es">Motel</rdfs:label>
+        <rdfs:label xml:lang="fr">Motel</rdfs:label>
+        <rdfs:label xml:lang="pt">Motel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Museum -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Museum">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Museu</rdfs:label>
+        <rdfs:label xml:lang="pt">Museu</rdfs:label>
+        <rdfs:label xml:lang="fr">Musée</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Novotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Novotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OneBedroomApartment -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OneBedroomApartment">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="pt">Apartamento com Cama Individual</rdfs:label>
+        <rdfs:label xml:lang="es">Apartamento con cama individual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Orbis -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Orbis">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OtherHospitality">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension"/>
+        <rdfs:label xml:lang="fr">Autre hospitalité</rdfs:label>
+        <rdfs:label xml:lang="es">Otra hospitalidad</rdfs:label>
+        <rdfs:label xml:lang="pt">Outra hospitalidade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OutdoorSwimmingPool -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OutdoorSwimmingPool">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:label xml:lang="es">Piscina al aire libre</rdfs:label>
+        <rdfs:label xml:lang="pt">Piscina exterior</rdfs:label>
+        <rdfs:label xml:lang="fr">Piscine extérieure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OutdoorSwimmingPoolTimetable -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#OutdoorSwimmingPoolTimetable">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Timetable"/>
+        <rdfs:label xml:lang="es">Horario de la piscina al aire libre</rdfs:label>
+        <rdfs:label xml:lang="pt">Horário da Piscina Externa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Park -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Park">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="fr">Parc</rdfs:label>
+        <rdfs:label xml:lang="es">Parque</rdfs:label>
+        <rdfs:label xml:lang="pt">Parque</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Parking -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Parking">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Estacionamento</rdfs:label>
+        <rdfs:label xml:lang="es">Estacionamiento</rdfs:label>
+        <rdfs:label xml:lang="pt">Parque de Estacionamento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ParkingPrice -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ParkingPrice">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price"/>
+        <rdfs:label xml:lang="es">Precio del estacionamiento</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Estacionamento</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Parqueamento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pension">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Accommodation"/>
+        <rdfs:label xml:lang="fr">Pension</rdfs:label>
+        <rdfs:label xml:lang="es">Pensión</rdfs:label>
+        <rdfs:label xml:lang="pt">Pensão</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PestanaGroupHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PestanaGroupHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pillow -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pillow">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Almohada</rdfs:label>
+        <rdfs:label xml:lang="pt">Travesseiro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Playground -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Playground">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Parque Infantil</rdfs:label>
+        <rdfs:label xml:lang="es">Patio de recreo</rdfs:label>
+        <rdfs:label xml:lang="pt">Praça de Brinquedos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest">
+        <rdfs:comment xml:lang="en">This class sholud be a sub-ontology.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Les points d&apos;intérêt</rdfs:label>
+        <rdfs:label xml:lang="pt">Pontos de interesse</rdfs:label>
+        <rdfs:label xml:lang="es">Puntos de interés</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PoolBar -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PoolBar">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:label xml:lang="pt">Bar da piscina</rdfs:label>
+        <rdfs:label xml:lang="es">Bar de la piscina</rdfs:label>
+        <rdfs:label xml:lang="fr">Bar de la piscine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PortoBayHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PortoBayHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PostalCode -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PostalCode">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Location"/>
+        <rdfs:label xml:lang="fr">Code Postale</rdfs:label>
+        <rdfs:label xml:lang="pt">Código Postal</rdfs:label>
+        <rdfs:label xml:lang="es">Código postal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price">
+        <rdfs:label xml:lang="es">Precio</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pullman -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Pullman">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#QueenTwoBedroomApartment -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#QueenTwoBedroomApartment">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="pt">Apartamento Queen com Duas Camas</rdfs:label>
+        <rdfs:label xml:lang="es">Apartamento con 2 camas queen</rdfs:label>
+        <rdfs:label xml:lang="es">Piso con 2 camas queen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RadissonHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RadissonHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Rating -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Rating">
+        <rdfs:label xml:lang="pt">Avaliação da Acomodação</rdfs:label>
+        <rdfs:label xml:lang="es">Evaluación del alojamiento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ReadingLounge -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ReadingLounge">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Sala de lectura</rdfs:label>
+        <rdfs:label xml:lang="pt">Sala de leitura</rdfs:label>
+        <rdfs:label xml:lang="fr">Salon de lecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Reception -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Reception">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="pt">Funcionários da Receção</rdfs:label>
+        <rdfs:label xml:lang="es">Personal de la recepción</rdfs:label>
+        <rdfs:label xml:lang="es">Recepcionista</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Refrigerator -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Refrigerator">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Frigobar</rdfs:label>
+        <rdfs:label xml:lang="en">Mini-bar</rdfs:label>
+        <rdfs:label xml:lang="pt">Minibar</rdfs:label>
+        <rdfs:label xml:lang="es">Nevera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Restaurant -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="fr">Restaurant</rdfs:label>
+        <rdfs:label xml:lang="es">Restaurante</rdfs:label>
+        <rdfs:label xml:lang="pt">Restaurante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RestaurantPrice -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RestaurantPrice">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price"/>
+        <rdfs:label xml:lang="es">Precio del restaurante</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Restaurante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RestaurantStaff -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RestaurantStaff">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="pt">Funcionários do Restaurante</rdfs:label>
+        <rdfs:label xml:lang="es">Personal del restaurante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RestaurantTimetable -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RestaurantTimetable">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Timetable"/>
+        <rdfs:label xml:lang="es">Horario del restaurante</rdfs:label>
+        <rdfs:label xml:lang="pt">Horário do Restaurante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RomanticRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RomanticRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <rdfs:label xml:lang="es">Habitación romantica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Room -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Room">
+        <rdfs:label xml:lang="fr">Chambre</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Facility"/>
+        <rdfs:label xml:lang="pt">Facilidades do Quarto</rdfs:label>
+        <rdfs:label xml:lang="es">Servicios de habitación</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomPrice -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomPrice">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Price"/>
+        <rdfs:label xml:lang="es">Precio de la habitación</rdfs:label>
+        <rdfs:label xml:lang="pt">Preço do Quarto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomService -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomService">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Servicio de habitaciones</rdfs:label>
+        <rdfs:label xml:lang="pt">Serviço de Quarto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Sauna -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Sauna">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentre"/>
+        <rdfs:label xml:lang="es">Sauna</rdfs:label>
+        <rdfs:label xml:lang="pt">Sauna</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service">
+        <rdfs:label xml:lang="es">Servicio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ShoeShine -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ShoeShine">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Engrase de sapatos</rdfs:label>
+        <rdfs:label xml:lang="pt">Engraxamento de Sapatos</rdfs:label>
+        <rdfs:label xml:lang="es">Lustrador de sapatos</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Shopping -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Shopping">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="fr">Centre commercial</rdfs:label>
+        <rdfs:label xml:lang="es">Centro comercial</rdfs:label>
+        <rdfs:label xml:lang="pt">Centro comercial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ShowerBath -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ShowerBath">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="pt">Chuveiro</rdfs:label>
+        <rdfs:label xml:lang="es">Ducha</rdfs:label>
+        <rdfs:label xml:lang="pt">Duche</rdfs:label>
+        <rdfs:label xml:lang="en">Shower</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SingleRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SingleRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#StandardRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Suite"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TripleRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="fr">Chambre simple</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación single</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto de solteiro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Sink -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Sink">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="es">Lavabo</rdfs:label>
+        <rdfs:label xml:lang="pt">Lavatório</rdfs:label>
+        <rdfs:label xml:lang="pt">Pia</rdfs:label>
+        <rdfs:label xml:lang="en">Washbasin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SmokingArea -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SmokingArea">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Zona para fumadores</rdfs:label>
+        <rdfs:label xml:lang="pt">Área de Fumadores</rdfs:label>
+        <rdfs:label xml:lang="pt">Área de Fumantes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Snacks -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Snacks">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Salados</rdfs:label>
+        <rdfs:label xml:lang="pt">Salgados</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SoccerSquare -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SoccerSquare">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Square"/>
+        <rdfs:label xml:lang="es">Campo de fútbol</rdfs:label>
+        <rdfs:label xml:lang="fr">Carrés de football</rdfs:label>
+        <rdfs:label xml:lang="pt">Quadra de futebol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Sofitel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Sofitel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentre -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentre">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="es">Balneario SPA</rdfs:label>
+        <rdfs:label xml:lang="es">Centro de SPA</rdfs:label>
+        <rdfs:label xml:lang="pt">Centro de spa</rdfs:label>
+        <rdfs:label xml:lang="pt">Spa</rdfs:label>
+        <rdfs:label xml:lang="en">WellnessCentre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentreTimetable -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentreTimetable">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Timetable"/>
+        <rdfs:label xml:lang="es">Horario del SPA</rdfs:label>
+        <rdfs:label xml:lang="pt">Horário do Spa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Square -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Square">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="fr">Carrés</rdfs:label>
+        <rdfs:label xml:lang="es">Pista</rdfs:label>
+        <rdfs:label xml:lang="pt">Quadra</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Squares -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Squares">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">?</rdfs:label>
+        <rdfs:label xml:lang="pt">?</rdfs:label>
+        <rdfs:label xml:lang="fr">Carré</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Stadium -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Stadium">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Estadio</rdfs:label>
+        <rdfs:label xml:lang="pt">Estádio</rdfs:label>
+        <rdfs:label xml:lang="fr">Stade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff">
+        <rdfs:label xml:lang="es">Personal</rdfs:label>
+        <rdfs:label xml:lang="pt">Quadro de Funcionários</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Stair -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Stair">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Escada</rdfs:label>
+        <rdfs:label xml:lang="pt">Escadaria</rdfs:label>
+        <rdfs:label xml:lang="es">Escalera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Standard -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Standard">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorComfort"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorFirstClass"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorLuxury"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="es">Estándar</rdfs:label>
+        <rdfs:label xml:lang="pt">Padrão</rdfs:label>
+        <rdfs:label xml:lang="fr">Standard</rdfs:label>
+        <rdfs:label xml:lang="en">Two Star</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#StandardRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#StandardRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Suite"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TripleRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="fr">Chambre standard</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación estandár</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación standard</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SteamIron -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SteamIron">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Iron"/>
+        <rdfs:label xml:lang="pt">Ferro a Vapor</rdfs:label>
+        <rdfs:label xml:lang="es">Plancha a vapor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Street -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Street">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Location"/>
+        <rdfs:label xml:lang="es">Calle</rdfs:label>
+        <rdfs:label xml:lang="pt">Rua</rdfs:label>
+        <rdfs:label xml:lang="fr">Rue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#StudioApartment -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#StudioApartment">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="pt">Apartamento Studio</rdfs:label>
+        <rdfs:label xml:lang="es">Apartamento tipo estudio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Suite -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Suite">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TripleRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="es">Suite</rdfs:label>
+        <rdfs:label xml:lang="fr">Suite</rdfs:label>
+        <rdfs:label xml:lang="pt">Suíte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuiteNovotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuiteNovotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuiteWithBalconyAndSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuiteWithBalconyAndSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Suite"/>
+        <rdfs:label xml:lang="es">Suite con terraza y vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorComfort -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorComfort">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorFirstClass"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorLuxury"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="es">Comodidad superior</rdfs:label>
+        <rdfs:label xml:lang="fr">Confort Supérieur</rdfs:label>
+        <rdfs:label xml:lang="pt">Conforto Superior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorDoubleRoomWithSideSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorDoubleRoomWithSideSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#DoubleRoom"/>
+        <rdfs:label xml:lang="es">Habitación doble superior con vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorFirstClass -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorFirstClass">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorLuxury"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="es">Comodidad clase superior</rdfs:label>
+        <rdfs:label xml:lang="pt">Conforto classe superior</rdfs:label>
+        <rdfs:label xml:lang="fr">Supérieur première classe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorLuxury -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorLuxury">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="es">Lujo superior</rdfs:label>
+        <rdfs:label xml:lang="pt">Luxo superior</rdfs:label>
+        <rdfs:label xml:lang="fr">Supérieur luxe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorStandard">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="es">Estándar superior</rdfs:label>
+        <rdfs:label xml:lang="pt">Padrão superior</rdfs:label>
+        <rdfs:label xml:lang="fr">Standard supérieur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTourist">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist"/>
+        <rdfs:label xml:lang="fr">Supérieur touristique</rdfs:label>
+        <rdfs:label xml:lang="pt">Turista superior</rdfs:label>
+        <rdfs:label xml:lang="es">Turístico superior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTwinRoomWithBalconyAndSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SuperiorTwinRoomWithBalconyAndSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="es">Habitación compartida superior con terraza y vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SwimmingPoolStaff -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SwimmingPoolStaff">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Staff"/>
+        <rdfs:label xml:lang="pt">Funcionários da Piscina</rdfs:label>
+        <rdfs:label xml:lang="es">Personal de pisicina</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tap -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tap">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="en">Faucet</rdfs:label>
+        <rdfs:label xml:lang="es">Grifo</rdfs:label>
+        <rdfs:label xml:lang="pt">Torneira</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Telephone -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Telephone">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="en">Phone</rdfs:label>
+        <rdfs:label xml:lang="pt">Telefone</rdfs:label>
+        <rdfs:label xml:lang="es">Teléfono</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Television -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Television">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="en">TV</rdfs:label>
+        <rdfs:label xml:lang="es">TV</rdfs:label>
+        <rdfs:label xml:lang="pt">TV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TennisSquare -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TennisSquare">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Square"/>
+        <rdfs:label xml:lang="fr">Carrés de tennis</rdfs:label>
+        <rdfs:label xml:lang="es">Pista de tenis</rdfs:label>
+        <rdfs:label xml:lang="pt">Quadra de tênis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Terrace -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Terrace">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="en">Balcony</rdfs:label>
+        <rdfs:label xml:lang="pt">Sacada</rdfs:label>
+        <rdfs:label xml:lang="es">Terraza</rdfs:label>
+        <rdfs:label xml:lang="pt">Terraço</rdfs:label>
+        <rdfs:label xml:lang="pt">Varanda</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Theatre -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Theatre">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Teatro</rdfs:label>
+        <rdfs:label xml:lang="pt">Teatro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ThreeBedroomApartment -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ThreeBedroomApartment">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="pt">Apartamento com 3 Camas</rdfs:label>
+        <rdfs:label xml:lang="es">Apartamento con 3 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Piso con 3 camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Timetable -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Timetable">
+        <rdfs:label xml:lang="es">Calendario</rdfs:label>
+        <rdfs:label xml:lang="es">Horario</rdfs:label>
+        <rdfs:label xml:lang="pt">Horário</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TivoliHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TivoliHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TobaccoShop -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TobaccoShop">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:label xml:lang="pt">Tabacaria</rdfs:label>
+        <rdfs:label xml:lang="es">Tienda de tabaco</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Toilet -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Toilet">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="es">Baño</rdfs:label>
+        <rdfs:label xml:lang="pt">Casa de Banho</rdfs:label>
+        <rdfs:label xml:lang="es">Cuarto de baño</rdfs:label>
+        <rdfs:label xml:lang="pt">Lavatório</rdfs:label>
+        <rdfs:label xml:lang="pt">Sanita</rdfs:label>
+        <rdfs:label xml:lang="pt">Vaso Sanitário</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TourDesk -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TourDesk">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Service"/>
+        <rdfs:label xml:lang="es">Oficina de turismo</rdfs:label>
+        <rdfs:label xml:lang="pt">Posto de Turismo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Tourist">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelCategory"/>
+        <rdfs:label xml:lang="en">One Star</rdfs:label>
+        <rdfs:label xml:lang="fr">Touristique</rdfs:label>
+        <rdfs:label xml:lang="pt">Turista</rdfs:label>
+        <rdfs:label xml:lang="es">Turístico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Towel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Towel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#BathRoomFacility"/>
+        <rdfs:label xml:lang="pt">Toalha</rdfs:label>
+        <rdfs:label xml:lang="es">Toalla</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TreeHouseHotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TreeHouseHotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:comment>Some hotels are built with living trees as structural elements, for example the Costa Rica Tree House in the Gandoca-Manzanillo Wildlife Refuge, Costa Rica; the Treetops Hotel in Aberdare National Park, Kenya; the Ariau Towers near Manaus, Brazil, on the Rio Negro in the Amazon; and Bayram&apos;s Tree Houses in Olympos, Turkey.</rdfs:comment>
+        <rdfs:label xml:lang="pt">Hotel casa da árvore</rdfs:label>
+        <rdfs:label xml:lang="es">Hotel casa del árbol</rdfs:label>
+        <rdfs:label xml:lang="fr">Hôtel maison dans l&apos;arbre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TripleRoom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TripleRoom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <owl:disjointWith rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="fr">Chambre triple</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación triple</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto triplo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TurkishBath -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TurkishBath">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#SpaCentre"/>
+        <rdfs:label xml:lang="pt">Banho Turco</rdfs:label>
+        <rdfs:label xml:lang="es">Baño turco</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelRoom"/>
+        <rdfs:label xml:lang="es">Doble</rdfs:label>
+        <rdfs:label xml:lang="fr">Double</rdfs:label>
+        <rdfs:label xml:lang="pt">Duplo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinPrivateSharedBathroom -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinPrivateSharedBathroom">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Habitación compartida privada con cuarto de baño compartido</rdfs:label>
+        <rdfs:label xml:lang="pt">Twin Privado com Banheiro Compartilhado</rdfs:label>
+        <rdfs:label xml:lang="pt">Twin Privado com Casa de Banho Compartilhada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinRoomWithLandView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinRoomWithLandView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="es">Habitación compartida con vistas de la campiña </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinRoomWithPoolView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinRoomWithPoolView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="es">Habitación compartida con vistas de la piscina</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinRoomWithSeaView -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinRoomWithSeaView">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Twin"/>
+        <rdfs:label xml:lang="es">Habitación compartida con vistas al mar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwoBedroomApartment -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwoBedroomApartment">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="pt">Apartamento com 2 Camas</rdfs:label>
+        <rdfs:label xml:lang="es">Apartamento con 2 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Piso con 2 camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwoBedroomWithTerrace -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwoBedroomWithTerrace">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ApartmentRoom"/>
+        <rdfs:label xml:lang="es">Dos camas con terraza</rdfs:label>
+        <rdfs:label xml:lang="pt">Duas Camas com Terraço</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#UnderWaterHotel -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#UnderWaterHotel">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Hotel"/>
+        <rdfs:comment>Some hotels have accommodation underwater, such as Utter Inn in Lake Mälaren, Sweden. Hydropolis, project cancelled 2004 in Dubai, would have had suites on the bottom of the Persian Gulf, and Jules Undersea Lodge in Key Largo, Florida requires scuba diving to access its rooms.</rdfs:comment>
+        <rdfs:label xml:lang="es">Hotel acuático</rdfs:label>
+        <rdfs:label xml:lang="pt">Hotel aquático</rdfs:label>
+        <rdfs:label xml:lang="fr">Hôtel sous l&apos;eau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#University -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#University">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#PointsOfInterest"/>
+        <rdfs:label xml:lang="es">Universidad</rdfs:label>
+        <rdfs:label xml:lang="pt">Universidade</rdfs:label>
+        <rdfs:label xml:lang="fr">Université</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#VilaGaléHotels -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#VilaGaléHotels">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HotelChain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#WallSocket -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#WallSocket">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Enchufe</rdfs:label>
+        <rdfs:label xml:lang="en">Plug Socket</rdfs:label>
+        <rdfs:label xml:lang="en">Socket</rdfs:label>
+        <rdfs:label xml:lang="pt">Tomada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Wardrobe -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Wardrobe">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="es">Armario</rdfs:label>
+        <rdfs:label xml:lang="pt">Guarda-roupa</rdfs:label>
+        <rdfs:label xml:lang="pt">Roupeiro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Wi-FiZone -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Wi-FiZone">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ExternalFacility"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#InternalFacility"/>
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#RoomFacility"/>
+        <rdfs:label xml:lang="pt">Rede Sem Fio</rdfs:label>
+        <rdfs:label xml:lang="pt">Zona de Wi-Fi</rdfs:label>
+        <rdfs:label xml:lang="es">Zona inalámbrica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#YoungCouple -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#YoungCouple">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Couple"/>
+        <rdfs:label xml:lang="pt">Casal Jovem</rdfs:label>
+        <rdfs:label xml:lang="es">Pareja joven</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#10BedFemaleDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#10BedFemaleDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="fr">10 lits pour les femmes</rdfs:label>
+        <rdfs:label xml:lang="es">Dormitorio femenino con 10 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación femenina con 10 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Feminino com 10 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#10BedMixedDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#10BedMixedDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Dormitorio misto con 10 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación mista con 10 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Misto com 10 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#12BedFemaleDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#12BedFemaleDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Dormitorio femenino con 12 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación femenina con 12 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Feminino com 12 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#12BedMixedDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#12BedMixedDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Dormitorio misto con 12 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación mista con 12 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Misto com 12 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#4BedFemaleDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#4BedFemaleDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Habitación femenina con 4 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Feminino com 4 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#4BedMixedDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#4BedMixedDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Dormitorio misto con 4 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación mista con 4 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Misto com 4 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#6BedFemaleDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#6BedFemaleDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Habitación femenina con 6 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Feminino com 6 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#6BedMixedDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#6BedMixedDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Dormitorio misto con 6 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación mista con 6 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto misto com 6 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#8BedFemaleDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#8BedFemaleDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Habitación femenina con 8 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Feminino com 8 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#8BedMixedDorm -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#8BedMixedDorm">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#HostelRoom"/>
+        <rdfs:label xml:lang="es">Dormitorio misto con 8 camas</rdfs:label>
+        <rdfs:label xml:lang="es">Habitación mista con 8 camas</rdfs:label>
+        <rdfs:label xml:lang="pt">Quarto Misto com 8 Camas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ThalassaSeaAndSpa -->
+
+    <owl:Class rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#ThalassaSeaAndSpa">
+        <rdfs:subClassOf rdf:resource="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#AccorHotels"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Co-worker"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Couple"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#Family"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#GroupOfFriends"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#IndividualTraveller"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#TwinPrivateSharedBathroom"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#10BedFemaleDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#10BedMixedDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#12BedFemaleDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#12BedMixedDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#4BedFemaleDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#4BedMixedDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#6BedFemaleDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#6BedMixedDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#8BedFemaleDorm"/>
+            <rdf:Description rdf:about="http://ontolp.inf.pucrs.br/Recursos/downloads-Hontology.php#8BedMixedDorm"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

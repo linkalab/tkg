@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/arco/test/CQ/testcase-11.owl#"
+     xml:base="https://w3id.org/arco/test/CQ/testcase-11.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:testalod="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#"
+     xmlns:testannotationschema="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/arco/test/CQ/testcase-11.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/schemas/testannotationschema.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl"/>
+        <testannotationschema:hasActualResult rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1?query=PREFIX%20tao%3A%20%3Chttp%3A%2F%2Fpurl.org%2Ftao%2Fns%23%3E%0APREFIX%20gn%3A%20%3Chttp%3A%2F%2Fwww.geonames.org%2Fontology%23%3E%0APREFIX%20kgt_td%3A%20%3Chttp%3A%2F%2Ftourism.kg.linkalab-cloud.com%2Ftd%2F%3E%0Aselect%20distinct%20%3Fname%20%3Ffeature%0A%7B%0A%20%20%20%20graph%20%3Chttp%3A%2F%2Ftourism.kg.linkalab-cloud.com%2Fng%2Fdestinations%3E%20%7B%0A%20%20%20%20%20%20%20%20%3Fdst%20tao%3AcontainsGeo%20%3Fparent_feature%20.%0A%20%20%20%20%7D%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20SERVICE%20%3Chttp%3A%2F%2Ffactforge.net%2Frepositories%2Fff-news%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ffeature%20gn%3AparentFeature%2B%20%20%3Fparent_feature%20%3B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gn%3Aname%20%3Fname%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20FILTER%28regex%28str%28%3Ffeature%29%2C%20%22sws.geonames.org%22%29%20%29%0A%20%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%7D%0A%20%20%20%20FILTER%28%3Fdst%20%3D%20kgt_td%3Asardinia%29%0A%7D%20limit%2010%20"/>
+        <testannotationschema:hasCQ xml:lang="en">CQ11: What Tourist Locations can be found in a Tourist Destination?</testannotationschema:hasCQ>
+        <testannotationschema:hasExpectedResult>&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;
+&lt;sparql xmlns=&apos;http://www.w3.org/2005/sparql-results#&apos;&gt;
+	&lt;head&gt;
+		&lt;variable name=&apos;name&apos;/&gt;
+		&lt;variable name=&apos;feature&apos;/&gt;
+	&lt;/head&gt;
+	&lt;results&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Villaurbana&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2522720/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Ussana&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2522821/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Uras&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2522826/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Rovine di Tharros&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2522937/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Tertenia&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2522944/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Sulcis&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2522984/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Soleminis&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2523062/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Siurgus Donigala&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2523071/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Simaxis&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2523099/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+		&lt;result&gt;
+			&lt;binding name=&apos;name&apos;&gt;
+				&lt;literal&gt;Serri&lt;/literal&gt;
+			&lt;/binding&gt;
+			&lt;binding name=&apos;feature&apos;&gt;
+				&lt;uri&gt;http://sws.geonames.org/2523141/&lt;/uri&gt;
+			&lt;/binding&gt;
+		&lt;/result&gt;
+	&lt;/results&gt;
+&lt;/sparql&gt;</testannotationschema:hasExpectedResult>
+        <testannotationschema:hasSPARQLQueryUnitTest># CQ11: What Tourist Locations can be found in a Tourist Destination?
+
+PREFIX tao: &lt;http://purl.org/tao/ns#&gt;
+PREFIX gn: &lt;http://www.geonames.org/ontology#&gt;
+PREFIX kgt_td: &lt;http://tourism.kg.linkalab-cloud.com/td/&gt;
+select distinct ?name ?feature
+{
+    graph &lt;http://tourism.kg.linkalab-cloud.com/ng/destinations&gt; {
+        ?dst tao:containsGeo ?parent_feature .
+    }
+    {
+        SERVICE &lt;http://factforge.net/repositories/ff-news&gt; {
+            ?feature gn:parentFeature+  ?parent_feature ; 
+                gn:name ?name .
+            FILTER(regex(str(?feature), &quot;sws.geonames.org&quot;) )
+         } 
+    }
+    FILTER(?dst = kgt_td:sardinia)
+} limit 10</testannotationschema:hasSPARQLQueryUnitTest>
+        <testannotationschema:testDate xml:lang="en">2021-05-10</testannotationschema:testDate>
+        <testannotationschema:testedBy xml:lang="en">Ran by Luca Secchi</testannotationschema:testedBy>
+        <rdfs:comment xml:lang="en">Test on TAO release 1.0</rdfs:comment>
+        <testalod:hasInputTestDataCategory rdf:resource="https://raw.githubusercontent.com/TESTaLOD/TESTaLOD/master/ontology/testalod.owl#SPARQLendpoint"/>
+        <testalod:hasInputTestDataUri rdf:resource="http://tourism.sparql.linkalab-cloud.com/repositories/KGTourismV1"/>
+    </owl:Ontology>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

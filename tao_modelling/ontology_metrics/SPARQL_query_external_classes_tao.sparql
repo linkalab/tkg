@@ -1,0 +1,18 @@
+############# To be executed in Protegé using SPARQL Query Tab
+
+###### IMPORTANT: first disable import of other ontologies
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (count(distinct ?subject) as ?tot) WHERE {
+#SELECT distinct ?subject WHERE { 
+  ?subject rdf:type owl:Class 
+filter( (! regex(str(?subject), "tao" )) &&  ( ! regex(str(?subject), "owl#Thing" )) )
+}
+
+
+####### Result:
+## "19"^^<http://www.w3.org/2001/XMLSchema#integer>

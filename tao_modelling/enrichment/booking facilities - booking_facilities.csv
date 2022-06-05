@@ -1,0 +1,522 @@
+entity,service_type,parent_class,class,type,selected,Note
+Entire unit wheelchair accessible,accessibility,,"AccommodationFeature, DisabledAccess",label,yes,
+Visual aids,added,"AccommodationFeature, Accessibility",,new_class,yes,
+Visual aids (Braille),accessibility,,"Accessibility, VisualAids",label,yes,
+Upper floors accessible by stairs only,accessibility,"AccommodationFeature, Accessibility",,new_class,yes,
+Lower bathroom sink,accessibility,,"AccommodationFeature, Accessibility",label,yes,
+Wheelchair accessible,accessibility,,"AccommodationFeature, DisabledAccess",,no,
+Upper floors accessible by elevator,accessibility,"AccommodationFeature, Accessibility",,new_class,yes,
+Auditory guidance,accessibility,"AccommodationFeature, Accessibility",,new_class,yes,
+Visual aids: Tactile signs,accessibility,,"Accessibility, VisualAids",label,yes,
+Toilet with grab rails,accessibility,"BathRoomFacility, Toilet",,new_class,yes,
+Bathroom emergency cord,accessibility,"AccommodationFeature, BathRoomFacility",,new_class,yes,
+Lowered sink,accessibility,"BathRoomFacility, Sink",,new_class,yes,
+Raised toilet,accessibility,"BathRoomFacility, Toilet",,new_class,yes,
+Emergency cord in bathroom,accessibility,,"BathRoomFacility, BathroomEmergencyCord",label,yes,
+Higher level toilet,accessibility,"BathRoomFacility, Toilet",,new_class,yes,
+Entire unit located on ground floor,accessibility,"AccommodationFeature, Accessibility",,new_class,yes,
+Visual aids: Braille,accessibility,,"Accessibility, VisualAids",label,no,
+Visual aids (tactile signs),accessibility,,"Accessibility, VisualAids",label,yes,
+Live music/performance,activities,,,,no,
+Live music,added,"Service, TourDesk",,new_class,yes,
+Live performance,added,"Service, TourDesk",,new_class,yes,
+Karaoke,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Badminton equipment,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Nightclub/DJ,activities,,"EntertainmentBusiness, NightClub",label,yes,
+Turkish/Steam Bath,activities,,"SpaCentre, TurkishBath",label,yes,
+Aerobics,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Mini golf,activities,"ExternalFacility, Square",,new_class,yes,
+Squash,activities,"ExternalFacility, Square",,new_class,yes,
+Tennis equipment,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Locker rooms,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Stand-up comedy,activities,,,,no,
+Tennis court,activities,"Square, TennisSquare",,,no,
+Games room,activities,,"InternalFacility, GameRoom",label,yes,
+Archery,activities,"AccommodationFeature, InternalFacility",,,yes,
+Water park,activities,"CivicStructure, Park",,new_class,yes,
+Horseback riding,activities,"AccommodationFeature, ExternalFacility",,new_class,yes,
+Golf course (within 2 miles),activities,,,,no,
+Game room,activities,,"InternalFacility, GameRoom",same,no,
+Golf course (within 3 km),activities,,,,no,
+Walking tours,activities,"Service, TourDesk",,new_class,yes,
+Themed dinner nights,activities,"Service, TourDesk",,new_class,yes,
+Movie nights,activities,"Service, TourDesk",,new_class,yes,
+Pub crawls,activities,"Service, TourDesk",,new_class,yes,
+Fishing,activities,"Service, TourDesk",,new_class,yes,
+Bike tours,activities,"Service, TourDesk",,new_class,yes,
+Kids' club,activities,,"InternalFacility, KidsClub",label,yes,
+Sauna,activities,,"SpaCentre, Sauna",same,no,
+Hot tub/jacuzzi,activities,,"SpaCentre, HydromassageJacuzzi",label,no,
+Hot tube,added,,"SpaCentre, HydromassageJacuzzi",label,yes,
+Live music/Performance,activities,,,,no,
+Fitness center,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Bingo,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Table tennis,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Hot tub,activities,,"SpaCentre, HydromassageJacuzzi",label,yes,
+Bikes available (free),activities,"AccommodationFeature, ExternalFacility",,new_class,yes,
+Themed dinners,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Racquetball,activities,"ExternalFacility, Square",,new_class,yes,
+Happy hour,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Tour or class about local culture,activities,"Service, TourDesk",,new_class,yes,
+Temporary art galleries,activities,"EntertainmentBusiness, ArtGallery",,new_class,yes,
+Canoeing,activities,"Service, TourDesk",,new_class,yes,
+Darts,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Evening entertainment,activities,"Service, TourDesk",,new_class,yes,
+Billiards,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Live sports events (broadcast),activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Pool table,activities,,"InternalFacility, Billiards",label,yes,
+Hot tub/Jacuzzi,activities,,,,no,repetition
+Cycling,activities,"Service, TourDesk",,new_class,no,
+Hiking,activities,"Service, TourDesk",,new_class,no,
+Live sport events (broadcast),activities,,,,no,repetition
+Cooking class,activities,"Service, TourDesk",,,yes,
+Entertainment staff,activities,,"Staff, LeisureStaff",label,yes,
+Diving,activities,"Service, TourDesk",,new_class,yes,
+Fitness centre,activities,,,,no,repetition
+Bar crawls,activities,,"TourDesk, PubCrawls",label,yes,
+Horse riding,activities,,,,no,repetition
+Bowling,activities,,"SportsActivityLocation, BowlingAlley",label,yes,
+Library,activities,,"LocalBusiness, Library",same,no,
+Casino,activities,,"InternalFacility, Casino",same,no,
+Bicycle rental (additional charge),activities,,"Service, BicycleRental",label,yes,
+Fitness/spa locker rooms,activities,,"InternalFacility, LockerRooms",label,yes,
+Hammam,activities,,"SpaCentre, TurkishBath",label,yes,
+Spa and wellness centre,activities,,"InternalFacility, SpaCentre",label,yes,
+Ping-pong,activities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Spa,activities,,"InternalFacility, SpaCentre",same,no,
+Tea maker,added,"AccommodationFeature, RoomFacility",,new_class,yes,
+Coffee maker,added,,"RoomFacility, CoffeeMachine",label,yes,
+Toilet paper,bathroom,"AccommodationFeature, BathRoomFacility",,new_class,yes,
+Sauna,bathroom,,"SpaCentre, Sauna",same,no,
+Bathtub or shower,bathroom,,,,no,
+Bidet,bathroom,,"AccommodationFeature, BathRoomFacility",new_class,yes,
+Private Bathroom,bathroom,"InternalFacility, Bathroom",,new_class,yes,
+Hairdryer,bathroom,,"BathRoomFacility, Hairdryer",same,no,
+Additional toilet,bathroom,"InternalFacility, Bathroom",,new_class,yes,
+Shared toilet,bathroom,"InternalFacility, Bathroom",,new_class,yes,
+Towels/Sheets (extra fee),bathroom,,,,no,
+Slippers,bathroom,"AccommodationFeature, RoomFacility",,new_class,yes,
+Bath,bathroom,,"BathRoomFacility, Bathtub",same,no,
+Shared bathroom,bathroom,"AccommodationFeature, BathRoomFacility",,new_class,yes,
+Bath or shower,bathroom,,,,no,
+Toilet,bathroom,,"BathRoomFacility, Toilet",same,no,
+Free toiletries,bathroom,"AccommodationFeature, BathRoomFacility",,new_class,yes,
+Additional bathroom,bathroom,,"Bathroom, AdditionalToilet",label,yes,
+Spa bath,bathroom,"AccommodationFeature, BathRoomFacility",,new_class,yes,
+Bathtub,bathroom,,"BathRoomFacility, Bathtub",same,no,
+Towels,bathroom,,"BathRoomFacility, Towel",same,no,
+Spa tub,bathroom,,"BathRoomFacility, SpaBath",label,yes,
+Private bathroom,bathroom,,,,no,repetition
+Shower,bathroom,,"BathRoomFacility, ShowerBath",same,no,
+Bathrobe,bathroom,,"BathRoomFacility, BathRobes",same,no,
+Towels/sheets (extra fee),bathroom,,,,no,repetition
+Guest bathroom,bathroom,"AccommodationFeature, BathRoomFacility",,new_class,yes,
+Linen,bedroom,,"RoomFacility, LinenTowel",same,no,
+Wardrobe or closet,bedroom,,"RoomFacility, Wardrobe",same,no,
+Dressing room,bedroom,"AccommodationFeature, RoomFacility",,new_class,yes,
+Walk-in closet,bedroom,,"RoomFacility, DressingRoom",label,yes,
+Linens,bedroom,,"RoomFacility, LinenTowel",same,no,repetition
+Alarm clock,bedroom,"AccommodationFeature, RoomFacility",,new_class,yes,
+Extra long beds (> 2 metres),bedroom,,,,no,
+Extra long beds (> 6.5 ft),bedroom,,,,no,
+Private apartment in building,building_characteristics,,,,no,
+Semi-detached,building_characteristics,,,,no,
+Detached,building_characteristics,,,,no,
+Business centre,business_facilities,,,,no,
+Meeting/Banquet facilities,business_facilities,,,,no,
+Meeting/banquet facilities,business_facilities,,,,no,
+Fax,business_facilities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Photocopying,business_facilities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Business center,business_facilities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Daily housekeeping,cleaning_services,"Service, HouseKeeping",,new_class,yes,
+Laundry,cleaning_services,,"InternalFacility, Laundry",same,no,
+Dry cleaning,cleaning_services,,"Service, DrycleaningService",label,yes,
+Ironing service,cleaning_services,"Service, DrycleaningService",,new_class,yes,
+Trouser press,cleaning_services,"Service, DrycleaningService",,new_class,yes,
+Shoeshine,cleaning_services,,"InternalFacility, ShoeShine",same,no,
+Suit press,cleaning_services,"Service, DrycleaningService",,new_class,yes,
+Shared lounge/TV area,common_areas,,"InternalFacility, LivingArea",label,yes,
+Games room,common_areas,,"InternalFacility, GameRoom",same,no,
+Chapel Shrine,common_areas,"AccommodationFeature, InternalFacility",,new_class,yes,
+Library,common_areas,,"LocalBusiness, Library",same,yes,
+Chapel/shrine,common_areas,,,,no,
+Game room,common_areas,,"InternalFacility, GameRoom",same,no,repetition
+Indoor play area,entertainment_and_family_services,"AccommodationFeature, InternalFacility",,new_class,yes,
+Casino,entertainment_and_family_services,,,,no,repetition
+Child safety socket covers,entertainment_and_family_services,"InternalFacility, KidsClub",,new_class,yes,
+Board games/puzzles,entertainment_and_family_services,"AccommodationFeature, InternalFacility",,new_class,yes,
+Children television networks,entertainment_and_family_services,"InternalFacility, KidsClub",,new_class,yes,
+Kids' outdoor play equipment,entertainment_and_family_services,"InternalFacility, KidsClub",,new_class,yes,
+"Books, DVDs, music for children",entertainment_and_family_services,,,,no,
+Kids' club,entertainment_and_family_services,,,,no,repetition
+Karaoke,entertainment_and_family_services,,,,no,repetition
+Strollers,entertainment_and_family_services,"InternalFacility, KidsClub",,new_class,yes,
+Baby safety gates,entertainment_and_family_services,"InternalFacility, KidsClub",,new_class,yes,
+Children's playground,entertainment_and_family_services,"InternalFacility, KidsClub",,new_class,yes,
+Babysitting/child services,entertainment_and_family_services,"InternalFacility, KidsClub",,new_class,yes,
+Nightclub/DJ,entertainment_and_family_services,,,,no,repetition
+"Books, DVDs, or music for children",entertainment_and_family_services,,,,no,repetition
+Evening entertainment,entertainment_and_family_services,,,,no,repetition
+Fruits,food_e_drink,,,,no,
+Chocolate or cookies,food_e_drink,,,,no,
+Minibar,food_e_drink,"RoomFacility, Fridge",,same,no,
+Kid-friendly buffet,food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+Vending machine (snacks),food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+On-site coffee house,food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+Vending machine (drinks),food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+On-site coffee shop,food_e_drink,"AccommodationFeature, InternalFacility","FoodEstablishment, CafeOrCoffeeShop",new_subclass,yes,
+Wine/champagne,food_e_drink,,,,yes,
+Bar,food_e_drink,"AccommodationFeature, InternalFacility","FoodEstablishment, BarOrPub",new_subclass,yes,
+Grocery deliveries,food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+Room service,food_e_drink,,"Service, RoomService",label,no,
+Wine/Champagne,food_e_drink,,,,no,
+Kids' meals,food_e_drink,,,,no,
+Breakfast in the room,food_e_drink,,,,no,
+Special diet menus (on request),food_e_drink,,,,no,
+Chocolate/Cookies,food_e_drink,,,,no,
+Restaurant,food_e_drink,,"InternalFacility, Restaurant",same,no,
+Packed lunches,food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+Bottle of water,food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+Kid meals,food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+Snack bar,food_e_drink,"AccommodationFeature, InternalFacility",,new_class,yes,
+Fruit,food_e_drink,,,,no,
+Special diet meals (on request),food_e_drink,,,,no,
+Non-smoking rooms,general,"Accommodation, Room",,new_class,yes,
+Room service,general,,"Service, RoomService",same,no,
+Packed lunches,general,,,,no,repetition
+Grocery deliveries,general,,,,no,repetition
+Mini-market on site,general,,,label,no,
+Paid WiFi,general,,"ExternalFacility, Wi-FiZone",label,yes,
+Executive lounge access,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Safe,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Honeymoon suite,general,"Accommodation, Room",,new_class,yes,
+Family rooms,general,"Accommodation, Room",,new_class,yes,
+Ironing facilities,general,,"DrycleaningService, IroningService",label,yes,
+Newspapers,general,"AccommodationFeature, Service",,new_class,yes,
+Carbon monoxide detector,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Gift shop,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Tile/Marble floor,general,,,,no,
+Iron,general,,"RoomFacility, Iron",same,no,
+Vending machine (drinks),general,,"InternalFacility, VendingMachineDrinks",,no,repetition
+Wake up service/Alarm clock,general,,"RoomFacility, AlarmClock",label,yes,
+Shared lounge/TV area,general,,"InternalFacility, LivingArea",,no,repetition
+Facilities for disabled guests,general,,"AccommodationFeature, Accessibility",label,yes,
+Fan,general,"AccommodationFeature, RoomFacility",,new_class,yes,
+Barber/beauty shop,general,,"InternalFacility, BeautySalon",label,yes,
+Smoke-free property,general,"Thing, AccommodationFeature",,new_class,no,TOFIX
+Hypoallergenic room,general,"Accommodation, Room",,new_class,yes,
+Interconnecting rooms,general,"Accommodation, Room",,new_class,yes,
+Soundproofing,general,"AccommodationFeature, RoomFacility",,new_class,yes,
+Laptop safe,general,"InternalFacility, Safe",,new_class,yes,
+Air conditioning,general,,"RoomFacility, AirConditioning",same,no,
+Lift,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Car hire,general,,"Service, CarRental",label,yes,
+Airport shuttle (additional charge),general,,"Service, AirportShuttle",label,yes,
+Shuttle service,general,"AccommodationFeature, Service",,new_class,yes,
+Shuttle service (free),general,,,,no,repetition
+Elevator,general,,"InternalFacility, Lift",label,yes,
+Heating,general,,"InternalFacility, HeatingSystem",same,no,
+Hypoallergenic,general,,"Room, HypoallergenicRoom",new_class,yes,
+Non-smoking throughout,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Carpeted,general,"AccommodationFeature, RoomFacility",,new_class,yes,
+Soundproof room,general,"Accommodation, Room",,new_class,yes,
+Safety deposit box,general,,"InternalFacility, Safe",label,yes,
+Bridal suite,general,"Accommodation, Room",,new_class,yes,
+Pet basket,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Shops (on site),general,,,,no,
+Vending machine (snacks),general,,,,no,repetition
+Designated smoking area,general,"AccommodationFeature, ExternalFacility",,new_class,yes,
+Hardwood or parquet floors,general,,,,no,
+VIP room facilities,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Shuttle service (additional charge),general,,,,no,repetition
+Interconnected room(s) available,general,,,,no,repetition
+Mosquito net,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Car rental,general,,"Service, CarRental",same,no,
+Wake-up service,general,,"RoomFacility, AlarmClock",label,yes,
+Allergy-free room,general,,HypoallergenicRoom,label,yes,
+Pet bowls,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Private entrance,general,"AccommodationFeature, InternalFacility",,new_class,yes,
+Pants press,general,"Service, DrycleaningService",,new_class,yes,repetition
+Tile/marble floor,general,,,,no,
+Airport shuttle (free),general,,,,no,repetition
+Wake-up service/Alarm clock,general,,,,no,repetition
+Hair/Beauty salon,general,,"InternalFacility, BeautySalon",label,yes,
+Adults only,general,,,,no,
+Airport shuttle,general,,,,no,repetition
+Adult only,general,,,,no,repetition
+Soundproof,general,,,,no,repetition
+Convenience store (on site),general,,"Store, ConvenienceStore",same,no,repetition
+Suit press,general,,,,no,repetition
+Oven,kitchen,,"RoomFacility, Oven",same,no,
+Children's high chair,kitchen,"InternalFacility, KidsClub",,new_class,yes,
+Stovetop,kitchen,,,,no,
+Refrigerator,kitchen,,"RoomFacility, Refrigerator",same,no,
+Electric kettle,kitchen,,"Kettle, EletricKettle",same,no,
+Kitchen,kitchen,,"RoomFacility, Kitchen",same,no,
+Cleaning products,kitchen,"AccommodationFeature, BathRoomFacility",,new_class,yes,
+Washing machine,kitchen,,"RoomFacility, WashingMachine",same,no,
+Dryer,kitchen,,"BathRoomFacility, Dryer",same,no,
+Kitchenware,kitchen,"AccommodationFeature, RoomFacility",,new_class,yes,
+Microwave,kitchen,,"RoomFacility, Microwave",same,no,
+Kitchenette,kitchen,,"Kitchen, Kitchenette",same,no,
+Tumble dryer,kitchen,,"BathRoomFacility, Dryer",label,yes,
+High chair,kitchen,"AccommodationFeature, RoomFacility",,new_class,yes,
+Shared kitchen,kitchen,"RoomFacility, Kitchen",,new_class,yes,
+Dining table,kitchen,"AccommodationFeature, RoomFacility",,new_class,yes,
+Toaster,kitchen,"AccommodationFeature, RoomFacility",,new_class,yes,
+Dishwasher,kitchen,,"RoomFacility, Dishwasher",same,no,
+Sofa,living_area,,"RoomFacility, Sofa",same,no,
+Sitting area,living_area,"AccommodationFeature, InternalFacility",,new_class,yes,
+Dining area,living_area,,"InternalFacility, DiningArea",new_class,yes,
+Seating Area,living_area,,"InternalFacility, SittingArea",label,yes,
+Desk,living_area,"AccommodationFeature, RoomFacility",,new_class,yes,
+Fireplace,living_area,"AccommodationFeature, RoomFacility",,new_class,yes,
+Satellite channels,media_e_technology,,"Television, SatelliteTv",label,yes,
+Telephone,media_e_technology,,"RoomFacility, Telephone",label,yes,
+Game console,media_e_technology,"AccommodationFeature, RoomFacility",,new_class,yes,
+Game console PS2,media_e_technology,,"RoomFacility, GameConsole",label,yes,
+Game console PS3,media_e_technology,,"RoomFacility, GameConsole",label,yes,
+TV,media_e_technology,,"RoomFacility, Television",same,no,
+Computer,media_e_technology,"AccommodationFeature, RoomFacility",,new_class,yes,
+Pay-per-view channels,media_e_technology,"RoomFacility, Television",,new_class,yes,
+Radio,media_e_technology,"AccommodationFeature, RoomFacility",,new_class,yes,
+iPod dock,media_e_technology,"AccommodationFeature, RoomFacility",,new_class,yes,
+Game console PS3,media_e_technology,,"RoomFacility, GameConsole",,no,
+Cable channels,media_e_technology,,"Television, Pay-Per-ViewChannels",label,yes,
+DVD player,media_e_technology,"AccommodationFeature, RoomFacility",,new_class,yes,
+Laptop safe,media_e_technology,,,,no,repetition
+Game console - Nintendo Wii,media_e_technology,,"RoomFacility, GameConsole",label,yes,
+Fax,media_e_technology,,"InternalFacility, Fax",same,no,repetition
+CD player,media_e_technology,"AccommodationFeature, RoomFacility",,new_class,yes,
+Video,media_e_technology,,,,no,
+Game console – Nintendo Wii,media_e_technology,,,,no,repetition
+Laptop,media_e_technology,,"RoomFacility, Computer",label,yes,
+Flat-screen TV,media_e_technology,"RoomFacility, Television",,new_class,yes,
+Video games,media_e_technology,,"RoomFacility, GameConsole",label,yes,
+iPad,media_e_technology,"AccommodationFeature, RoomFacility",,new_class,yes,
+Non-smoking throughout,miscellaneous,,,,no,repetition
+Non-smoking rooms,miscellaneous,,,,no,repetition
+Air conditioning,miscellaneous,,,,no,repetition
+Pet bowls,miscellaneous,,,,no,repetition
+Raised toilet,miscellaneous,,,,no,repetition
+Wheelchair accessible,miscellaneous,,,,no,repetition
+Adult only,miscellaneous,,,,no,repetition
+Auditory guidance,miscellaneous,,,,no,repetition
+Adults only,miscellaneous,,,,no,repetition
+Bridal suite,miscellaneous,,,,no,repetition
+Smoke-free property,miscellaneous,,,,no,repetition
+Heating,miscellaneous,,,,no,repetition
+Lower bathroom sink,miscellaneous,,,,no,repetition
+Facilities for disabled guests,miscellaneous,,,,no,repetition
+Lowered sink,miscellaneous,,,,no,repetition
+Family rooms,miscellaneous,,,,no,repetition
+Toilet with grab rails,miscellaneous,,,,no,repetition
+VIP room facilities,miscellaneous,,,,no,repetition
+Elevator,miscellaneous,,,,no,repetition
+Lift,miscellaneous,,,,no,repetition
+Pet basket,miscellaneous,,,,no,repetition
+Visual aids: Braille,miscellaneous,,,,no,repetition
+Allergy-free room,miscellaneous,,,,no,repetition
+Soundproof rooms,miscellaneous,,,,no,repetition
+Higher level toilet,miscellaneous,,,,no,repetition
+Bathroom emergency cord,miscellaneous,,,,no,repetition
+Designated smoking area,miscellaneous,,,,no,repetition
+Emergency cord in bathroom,miscellaneous,,,,no,repetition
+Visual aids (Braille),miscellaneous,,,,no,repetition
+Hypoallergenic room available,miscellaneous,,,,no,repetition
+Honeymoon suite,miscellaneous,,"Service, HoneymoonSuite",same,no,repetition
+View,outdoor_e_view,"AccommodationFeature, RoomFacility",,new_class,yes,
+Garden view,outdoor_e_view,"RoomFacility, View",,new_class,yes,
+Inner courtyard view,outdoor_e_view,"RoomFacility, View",,new_class,yes,
+Landmark view,outdoor_e_view,"RoomFacility, View",,new_class,yes,
+Terrace,outdoors,,,,no,repetition
+Patio,outdoors,,,,no,repetition
+Sun terrace,outdoors,,"RoomFacility, Terrace",label,yes,
+BBQ facilities,outdoors,,"ExternalFacility, Barbecue",label,yes,
+Private pool,outdoors,"AccommodationFeature, SwimmingPool",,new_class,yes,
+Balcony,outdoors,,"RoomFacility, Terrace",same,yes,
+Barbecue,outdoors,,"ExternalFacility, Barbecue",same,yes,
+Garden,outdoors,,"ExternalFacility, Garden",same,yes,
+Outdoor fireplace,outdoors,"AccommodationFeature, ExternalFacility",,new_class,yes,
+Picnic area,outdoors,"AccommodationFeature, ExternalFacility",,new_class,yes,
+Outdoor furniture,outdoors,"AccommodationFeature, ExternalFacility",,new_class,yes,
+Outdoor dining area,outdoors,"AccommodationFeature, ExternalFacility",,new_class,yes,
+Sun deck,outdoors,,,,no,
+Electric vehicle charging station,parking,"ExternalFacility, Parking",,new_class,yes,
+Parking garage,parking,"ExternalFacility, Parking",,new_class,yes,
+Secured parking,parking,"ExternalFacility, Parking",,new_class,yes,
+Secure parking,parking,,"Parking, SecuredParking",label,yes,
+Street parking,parking,"ExternalFacility, Parking",,new_class,yes,
+Accessible parking,parking,"ExternalFacility, Parking",,new_class,yes,
+Nessun dato.,pets,,,,no,
+Concierge service,reception_services,,"Service, ConciergeService",same,no,
+Luggage storage,reception_services,,"InternalFacility, LuggageRoom",label,yes,
+Ticket service,reception_services,"AccommodationFeature, Service",,new_class,yes,
+Tickets to attractions or shows,reception_services,,"Service, TicketService",new_class,yes,
+Express check-in/check-out,reception_services,"Service, CheckinService",,new_class,yes,
+Tour desk,reception_services,,"Service, TourDesk",same,no,
+Invoice provided,reception_services,,,,no,
+Currency exchange,reception_services,"AccommodationFeature, InternalFacility",,new_class,yes,
+24-hour front desk,reception_services,"Service, ConciergeService",,new_class,yes,
+Lockers,reception_services,"AccommodationFeature, InternalFacility",,new_class,yes,
+Newspapers,reception_services,,,,no,repetition
+Private check-in/check-out,reception_services,"Service, CheckinService",,new_class,yes,
+ATM/cash machine on site,reception_services,,,,no,repetition
+Interconnecting room(s) available,room_amenities,,,,no,repetition
+Fold-up bed,room_amenities,"RoomFacility, Bed",,new_class,yes,
+Interconnected room(s) available,room_amenities,,,,no,repetition
+Sofa bed,room_amenities,"RoomFacility, Sofa",,new_class,yes,
+Fan,room_amenities,,,,no,repetition
+Iron,room_amenities,,,,no,
+Air conditioning,room_amenities,,,,no,
+Safety deposit box,room_amenities,"InternalFacility, Safe",,new_class,yes,
+Safe,room_amenities,,,,no,
+Socket near the bed,room_amenities,"AccommodationFeature, RoomFacility",,new_class,yes,
+Drying rack for clothing,room_amenities,"AccommodationFeature, BathRoomFacility",,new_class,yes,
+Soundproofing,room_amenities,,,,no,repetition
+Electric blankets,room_amenities,"AccommodationFeature, RoomFacility",,new_class,yes,
+Pants press,room_amenities,,,,no,repetition
+Clothes rack,room_amenities,"AccommodationFeature, RoomFacility",,new_class,yes,
+Hypoallergenic,room_amenities,,,,no,repetition
+Private entrance,room_amenities,,,,no,repetition
+Heating,room_amenities,,,,no,repetition
+Hardwood or parquet floors,room_amenities,,,,no,
+Carpeted,room_amenities,,,,no,
+Mosquito net,room_amenities,,,,no,repetition
+Soundproof,room_amenities,,,,no,repetition
+Suit press,room_amenities,,,,no,repetition
+Tile/marble floor,room_amenities,,,,no,
+Tile/Marble floor,room_amenities,,,,no,
+Ironing facilities,room_amenities,,,,no,repetition
+Hot tub,room_amenities,,,,no,repetition
+24-hour security,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+CCTV outside property,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Carbon monoxide detector,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Key card access,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Smoke alarms,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Safe,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Security alarm,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Fire extinguishers,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Safety deposit box,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+CCTV in common areas,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Key access,safety_e_security,"AccommodationFeature, SafetyAndSecurity",,new_class,yes,
+Vending machine (snacks),services,,,,no,repetition
+Business centre,services,,,,no,repetition
+Wake-up service/Alarm clock,services,,,,no,repetition
+Vending machine (drinks),services,,,,no,repetition
+Luggage storage,services,,,,no,repetition
+Ticket service,services,,,,no,repetition
+Wireless Internet,services,,"ExternalFacility, Wi-FiZone",label,yes,
+Shared lounge/TV area,services,,,,no,repetition
+Meeting/banquet facilities,services,"InternalFacility, Meeting",,new_class,yes,
+Pet basket,services,,,,no,repetition
+Fax/Photocopying,services,,,,no,repetition
+Wireless internet,services,,,,no,repetition
+Babysitting/Child services,services,,,,no,repetition
+Tour desk,services,,,,no,repetition
+Executive lounge access,services,,,,no,repetition
+Business center,services,,,,no,repetition
+Wake up service/Alarm clock,services,,,,no,repetition
+24-hour front desk,services,,,,no,repetition
+Car hire,services,,,,no,repetition
+Airport shuttle (additional charge),services,,,,no,repetition
+Currency exchange,services,,,,no,repetition
+Shuttle service (additional charge),services,,,,no,repetition
+Trouser press,services,,,,no,repetition
+Airport shuttle (free),services,,,,no,repetition
+Dry cleaning,services,,,,no,repetition
+Airport shuttle,services,,,,no,repetition
+Shuttle service,services,,,,no,repetition
+Lockers,services,,,,no,repetition
+Fax/photocopying,services,,,,no,repetition
+Room service,services,,,,no,repetition
+Private check-in/check-out,services,,,,no,repetition
+Daily housekeeping,services,,,,no,repetition
+Concierge service,services,,,,no,repetition
+Babysitting/child services,services,,,,no,repetition
+Packed lunches,services,,,,no,repetition
+Car rental,services,,,,no,repetition
+Express check-in/out,services,,,,no,repetition
+ATM on site,services,"AccommodationFeature, InternalFacility",,new_class,yes,
+Suit press,services,,,,no,repetition
+Express check-in/check-out,services,,,,no,repetition
+Internet facilities,services,"AccommodationFeature, InternalFacility",,new_class,yes,
+Pet bowls,services,,,,no,
+Baggage storage,services,,"InternalFacility, LuggageRoom",label,yes,
+Private check-in/out,services,,,,no,repetition
+Wake-up service,services,,,,no,repetition
+Laundry,services,,"InternalFacility, Laundry",same,no,
+Ironing service,services,,,,no,
+ATM/cash machine on site,services,,"InternalFacility, AtmOnSite",label,yes,
+Meeting/Banquet facilities,services,,,,no,repetition
+Concierge,services,,,,no,repetition
+Wake-up service/Alarm clock,services_e_extras,,,,no,repetition
+Tickets to attractions or shows,services_e_extras,,,,no,repetition
+Wake-up service,services_e_extras,,,,no,repetition
+Wake up service/Alarm clock,services_e_extras,,,,no,repetition
+Executive lounge access,services_e_extras,,,,no,repetition
+Tickets to shows/attractions,services_e_extras,,,,no,repetition
+Mini-market on site,shops,,,,no,repetition
+Shops (on site),shops,,,,no,repetition
+Barber/beauty shop,shops,,,,no,repetition
+Convenience store (on site),shops,,,,no,repetition
+Gift shop,shops,,,,no,repetition
+Hair/Beauty salon,shops,,,,no,repetition
+Airport pick up,transport,,"Service, AirportShuttle",label,yes,
+Bicycle rental (additional charge),transport,,,,no,repetition
+Car hire,transport,,,,no,repetition
+Airport shuttle (additional charge),transport,,,,no,repetition
+Shuttle service,transport,,,,no,repetition
+Public transport tickets,transport,"Service, TourDesk",,new_class,yes,
+Shuttle service (free),transport,,,,no,repetition
+Shuttle service (additional charge),transport,,,,no,repetition
+Airport drop off,transport,,"Service, AirportShuttle",label,yes,
+Airport shuttle,transport,,,,no,repetition
+Garden view,view,,,,no,repetition
+Inner courtyard view,view,,,,no,repetition
+View,view,,,,no,repetition
+Landmark view,view,,,,no,repetition
+Spa and wellness centre,wellness_facilities,,,,no,repetition
+Spa/wellness packages,wellness_facilities,,"InternalFacility, SpaCentre",label,yes,
+Spa lounge/relaxation area,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Body wrap,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Beauty Services,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Hair styling,wellness_facilities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Hair treatments,wellness_facilities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Personal trainer,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Full body massage,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Fitness/spa locker rooms,wellness_facilities,,,,no,repetition
+Massage,wellness_facilities,"InternalFacility, SpaCentre","SpaCentre, Massage",same,no,
+Foot bath,wellness_facilities,"SpaCentre, Massage",,new_class,yes,
+Open-air bath,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Solarium,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Make up services,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Hand massage,wellness_facilities,"SpaCentre, Massage",,new_class,yes,
+Neck massage,wellness_facilities,"SpaCentre, Massage",,new_class,yes,
+Body Treatments,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Pedicure,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Waxing services,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Facial treatments,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Head massage,wellness_facilities,"SpaCentre, Massage",,new_class,yes,
+Light therapy,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Hair colouring,wellness_facilities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Fitness centre,wellness_facilities,,,,no,repetition
+Couples massage,wellness_facilities,"SpaCentre, Massage",,new_class,yes,
+Back massage,wellness_facilities,"SpaCentre, Massage",,new_class,yes,
+Manicure,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Hot tub/jacuzzi,wellness_facilities,,,,no,repetition
+Massage chair,wellness_facilities,"SpaCentre, Massage",,new_class,yes,
+Fitness classes,wellness_facilities,"SpaCentre, FitnessCenter",,new_class,yes,
+Yoga classes,wellness_facilities,"SpaCentre, FitnessCenter",,new_class,yes,
+Sauna,wellness_facilities,,,,no,repetition
+Steam room,wellness_facilities,,,,no,repetition
+Sun loungers or beach chairs,wellness_facilities,"SpaCentre, FitnessCenter",,new_class,yes,
+Public Bath,wellness_facilities,"AccommodationFeature, InternalFacility",,new_class,yes,
+Fitness,wellness_facilities,,,,no,
+Foot massage,wellness_facilities,"SpaCentre, Massage",,new_class,yes,
+Spa Facilities,wellness_facilities,,"InternalFacility, SpaCentre",label,yes,
+Hammam,wellness_facilities,,,,no,repetition
+Sun umbrellas,wellness_facilities,"AccommodationFeature, ExternalFacility",,new_class,yes,
+Body scrub,wellness_facilities,"InternalFacility, SpaCentre",,new_class,yes,
+Pool/beach towels,wellness_facilities,"AccommodationFeature, SwimmingPool",,new_class,yes,
+Hair cut,wellness_facilities,"AccommodationFeature, InternalFacility",,new_class,yes,

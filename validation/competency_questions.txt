@@ -1,0 +1,12 @@
+CQ 1 Which are the first 10 hotels with more than 1,000 reviews and the lowest mean value of users review scores?
+CQ 2 Find three apartments with Wi-Fi, distant at most 2Km from at least two Parks.
+CQ 3 Which Tourist Destinations have the highest percentage of high priced Lodging Facility (at least one offer for an accommodation for two persons with a nightly price two times over the mean price)? 
+CQ 4 What are the 10 tourist locations cited most by hotel descriptions that also offer a day Spa in a specific tourist destination?
+CQ 5 What are the most cited Tourist Locations in all Lodging Facility descriptions within a certain tourist destination?
+CQ 6 What are the Tourist Locations cited most in positive user reviews?
+CQ 7 What are the 10 cheapest apartments that offer at least two beds and a secured parking and are within 10km from an airport?
+CQ 8 Which type of Lodging Facility is more reviewed by tourists in a specific Tourist Destination?
+CQ 9 What are the top Tourist Destinations with respect to positive sentiment about food (i.e., percentage of Lodging Facilities with positive reviews that cite food)?
+CQ 10 In which months do we have the highest number of user reviews for Hotels?
+CQ 11 What Tourist Locations can be found in a Tourist Destination?
+CQ 12 How many beds are offered on lease in a certain Tourist Destination?

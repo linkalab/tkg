@@ -1,0 +1,529 @@
+label,class
+location amenity,LocationAmenity
+accommodation amenity,LocationAmenity
+lodging amenity,LocationAmenity
+bathroom amenity,BathroomAmenity
+dryer,Dryer
+dryer – in building,Dryer
+free dryer,Dryer
+free dryer – in unit,Dryer
+tumble dryer,Dryer
+bathtub,Bathtub
+washbasin,Sink
+sink,Sink
+lowered sink,LoweredSink
+balance,Balance
+bath robes,BathRobes
+towel,Towel
+towels,Towel
+essentials - towels,Towel
+shower,ShowerBath
+shower bath,ShowerBath
+toilet,Toilet
+toilet with grab rails,ToiletWithGrabRails
+raised toilet,RaisedToilet
+higher level toilet,HigherLevelToilet
+hygiene products,HygieneProducts
+cleaning products,HygieneProducts
+soap,Soap
+body soap,BodySoap
+gilchrist soames  body soap,BodySoap
+shampoo,Shampoo
+gilchrist soames  shampoo,Shampoo
+shower gel,ShowerGel
+faucet,Tap
+tap,Tap
+bidet,Bidet
+hairdryer,Hairdryer
+hair dryer,Hairdryer
+linen towel,LinenTowel
+bath or shower,BathOrShower
+bathroom emergency cord,BathroomEmergencyCord
+emergency cord in bathroom,BathroomEmergencyCord
+toilet paper,ToiletPaper
+free toiletries,FreeToiletries
+spa bath,SpaBath
+spa tub,SpaBath
+baby bath,BabyBath
+hot water,HotWater
+bathroom,Bathroom
+bath,Bathroom
+en suite bathroom,EnSuiteBathroom
+private bathroom,PrivateBathroom
+additional toilet,AdditionalToilet
+additional bathroom,AdditionalToilet
+shared toilet,SharedToilet
+shared bathroom,SharedToilet
+guest bathroom,GuestBathroom
+service,Service
+shoeshiner,ShoeShiner
+shoeshine,ShoeShiner
+fitness service,FitnessService
+spa/wellness packages,FitnessService
+aerobics,Aerobics
+archery,Archery
+horseback riding,HorsebackRiding
+personal trainer,PersonalTrainer
+massage,Massage
+full body massage,FullBodyMassage
+hand massage,HandMassage
+neck massage,NeckMassage
+head massage,HeadMassage
+couples massage,CouplesMassage
+back massage,BackMassage
+massage chair,MassageChair
+foot massage,FootMassage
+foot bath,FootBath
+fitness classes,FitnessClasses
+yoga classes,YogaClasses
+kids service,KidsService
+service for kids,KidsService
+kids' club,KidsClub
+children television networks,ChildrenTelevisionNetworks
+babysitting/child services,BabysittingChildServices
+kid-friendly buffet,Kid-FriendlyBuffet
+kid meals,KidMeals
+hair care,HairCare
+hair styling,HairStyling
+hair treatments,HairTreatments
+hair colouring,HairColouring
+hair cut,HairCut
+amusement service,AmusementService
+live music,LiveMusic
+live performance,LivePerformance
+walking tours,WalkingTours
+themed dinner nights,ThemedDinnerNights
+movie nights,MovieNights
+pub crawls,PubCrawls
+bar crawls,PubCrawls
+fishing,Fishing
+bike tours,BikeTours
+bingo,Bingo
+happy hour,HappyHour
+tour or class about local culture,TourOrClassAboutLocalCulture
+canoeing,Canoeing
+evening entertainment,EveningEntertainment
+live sports events (broadcast),LiveSportsEventsBroadcast
+diving,Diving
+laundry service,LaundryService
+laundromat nearby,LaundryService
+spoken language,SpokenLanguage
+english,English
+spanish,Spanish
+french,French
+italian,Italian
+arabic,Arabic
+portuguese,Portuguese
+russian,Russian
+polish,Polish
+romanian,Romanian
+german,German
+hungarian,Hungarian
+greek,Greek
+concierge service,ConciergeService
+24-hour front desk,24-HourFrontDesk
+car rental,CarRental
+car hire,CarRental
+airport shuttle,AirportShuttle
+airport shuttle (additional charge),AirportShuttle
+airport pick up,AirportShuttle
+airport drop off,AirportShuttle
+bicycle rental,BicycleRental
+bicycle rental (additional charge),BicycleRental
+tour desk,TourDesk
+babysitting,Babysitting
+babysitter recommendations,Babysitting
+in-room breakfast,In-roomBreakfast
+house keeping,HouseKeeping
+cleaning,HouseKeeping
+daily housekeeping,DailyHousekeeping
+drycleaning service,DrycleaningService
+dry cleaning,DrycleaningService
+ironing service,IroningService
+ironing facilities,IroningService
+trouser press,TrouserPress
+suit press,SuitPress
+pants press,PantsPress
+checkout service,CheckoutService
+currency exchange,CurrencyExchange
+reception,CheckinService
+checkin service,CheckinService
+express check-in/check-out,ExpressCheck-InCheck-Out
+private check-in/check-out,PrivateCheck-InCheck-Out
+room service,RoomService
+invoice provided,InvoiceProvided
+themed dinners,ThemedDinners
+photocopying,Photocopying
+grocery deliveries,GroceryDeliveries
+packed lunches,PackedLunches
+newspapers,Newspapers
+wake-up service,Wake-UpService
+wake up service/alarm clock,Wake-UpService
+shuttle service,ShuttleService
+ticket service,TicketService
+tickets to attractions or shows,TicketsToAttractionsOrShows
+public transport tickets,PublicTransportTickets
+beauty service,BeautyService
+body wrap,BodyWrap
+make up services,MakeUpServices
+body treatments,BodyTreatments
+pedicure,Pedicure
+waxing services,WaxingServices
+facial treatments,FacialTreatments
+light therapy,LightTherapy
+manicure,Manicure
+body scrub,BodyScrub
+host greets you,HostGreetsYou
+long term stays allowed,LongTermStaysAllowed
+self check-in,SelfCheck-In
+accessibility,Accessibility
+lower bathroom sink,Accessibility
+facilities for disabled guests,Accessibility
+disabled access,DisabledAccess
+entire unit wheelchair accessible,DisabledAccess
+visual aids,VisualAids
+visual aids (braille),VisualAids
+visual aids: tactile signs,VisualAids
+visual aids (tactile signs),VisualAids
+upper floors accessible by stairs only,UpperFloorsAccessibleByStairsOnly
+upper floors accessible by elevator,UpperFloorsAccessibleByElevator
+auditory guidance,AuditoryGuidance
+entire unit located on ground floor,EntireUnitLocatedOnGroundFloor
+safety and security,SafetyAndSecurity
+non-smoking throughout,Non-SmokingThroughout
+safe,Safe
+laptop safe,LaptopSafe
+safety deposit box,SafetyDepositBox
+carbon monoxide detector,CarbonMonoxideDetector
+carbon monoxide alarm,CarbonMonoxideDetector
+24-hour security,24-HourSecurity
+cctv outside property,CctvOutsideProperty
+key card access,KeyCardAccess
+smoke alarms,SmokeAlarms
+smoke alarm,SmokeAlarms
+security alarm,SecurityAlarm
+fire extinguishers,FireExtinguishers
+cctv in common areas,CctvInCommonAreas
+key access,KeyAccess
+lock on bedroom door,KeyAccess
+private room can be locked for safety and privacy,KeyAccess
+keypad,Keypad
+check yourself into the home with a door code,Keypad
+first aid kit,FirstAidKit
+lockbox,Lockbox
+smart lock,SmartLock
+amenity area,AmenityArea
+common area,CommonArea
+library,Library
+golfcourse,GolfCourse
+golf course,GolfCourse
+golf courses,GolfCourse
+restaurant,Restaurant
+restaurant pizzeria,Restaurant
+casino,Casino
+dayspa,DaySpa
+day spa,DaySpa
+spa center,DaySpa
+spa and wellness centre,DaySpa
+spa facilities,DaySpa
+spa lounge/relaxation area,SpaLoungeRelaxationArea
+beautysalon,BeautySalon
+beauty salon,BeautySalon
+barber/beauty shop,BeautySalon
+hair/beauty salon,BeautySalon
+playground,Playground
+indoor play area,Playground
+children's playground,Playground
+parkingfacility,ParkingFacility
+parking facility,ParkingFacility
+parking,ParkingFacility
+parking space,ParkingFacility
+parking place,ParkingFacility
+car park,ParkingFacility
+free parking on premises,ParkingFacility
+paid parking garage off premises,ParkingFacility
+paid parking on premises,ParkingFacility
+paid street parking off premises,ParkingFacility
+parking garage,ParkingGarage
+secured parking,SecuredParking
+secure parking,SecuredParking
+street parking,StreetParking
+free street parking,StreetParking
+accessible parking,AccessibleParking
+paid parking off premises,PaidParkingOffPremises
+public toilet,PublicToilet
+public bath,PublicToilet
+hot tub,HotTub
+jacuzzi,HotTub
+hydromassage jacuzzi,HotTub
+gym,Gym
+gym in building,Gym
+turkish bath,TurkishBath
+hammam,TurkishBath
+turkish/steam bath,TurkishBath
+sauna,Sauna
+wellnesscentre,Sauna
+game room,GameRoom
+games room,GameRoom
+tobacco shop,TobaccoShop
+smoking area,SmokingArea
+wi-fi zone,Wi-FiZone
+wifi,Wi-FiZone
+paid wifi,Wi-FiZone
+wireless internet,Wi-FiZone
+pocket wifi,Wi-FiZone
+wifi - available throughout the listing,Wi-FiZone
+wifi – 1000 mbps - available throughout the listing,Wi-FiZone
+disco,Disco
+stair,Stair
+reading lounge,ReadingLounge
+conference room,ConferenceRoom
+luggage room,LuggageRoom
+luggage storage,LuggageRoom
+baggage storage,LuggageRoom
+luggage dropoff allowed - for guests' convenience when they have early arrival or late departure,LuggageRoom
+ballroom,Ballroom
+laundry,Laundry
+hall,Hallway
+hallway,Hallway
+square,Square
+soccer square,SoccerSquare
+tennis square,TennisSquare
+tennis court,TennisSquare
+mini golf,MiniGolf
+squash,Squash
+racquetball,Racquetball
+pool bar,PoolBar
+garden,Garden
+fitness center,FitnessCenter
+business center,BusinessCenter
+chapel shrine,ChapelShrine
+on-site coffee house,On-SiteCoffeeHouse
+snack bar,SnackBar
+executive lounge access,ExecutiveLoungeAccess
+gift shop,GiftShop
+designated smoking area,DesignatedSmokingArea
+vip room facilities,VipRoomFacilities
+sitting area,SittingArea
+seating area,SittingArea
+changing room,ChangingRoom
+dressing room,ChangingRoom
+locker room,ChangingRoom
+swimming pool,SwimmingPool
+pool,SwimmingPool
+private pool,PrivatePool
+cuisine,Kitchen
+kitchen,Kitchen
+space where guests can cook their own meals,Kitchen
+kitchenette,Kitchenette
+shared kitchen,SharedKitchen
+balcony,Terrace
+terrace,Terrace
+patio,Terrace
+view terrace,Terrace
+sun terrace,Terrace
+patio or balcony,Terrace
+shared patio or balcony,Terrace
+roof terrace,RoofTerrace
+veranda,Veranda
+barbecue,Barbecue
+bbq facilities,Barbecue
+bbq grill,Barbecue
+living room,LivingRoom
+private living room,LivingRoom
+dining area,DiningArea
+dining room,DiningRoom
+living area,LivingArea
+shared lounge/tv area,LivingArea
+locker rooms,LockerRooms
+fitness/spa locker rooms,LockerRooms
+vending machine (snacks),VendingMachineSnacks
+vending machine (drinks),VendingMachineDrinks
+lift,Lift
+elevator,Lift
+private entrance,PrivateEntrance
+private entrance - separate street or building entrance,PrivateEntrance
+view,View
+garden view,GardenView
+inner courtyard view,InnerCourtyardView
+landmark view,LandmarkView
+outdoor fireplace,OutdoorFireplace
+picnic area,PicnicArea
+outdoor dining area,OutdoorDiningArea
+electric vehicle charging station,ElectricVehicleChargingStation
+lockers,Lockers
+meeting/banquet facilities,MeetingBanquetFacilities
+atm on site,AtmOnSite
+atm/cash machine on site,AtmOnSite
+internet facilities,InternetFacilities
+open-air bath,Open-AirBath
+solarium,Solarium
+backyard,Backyard
+an open space on the property usually covered in grass,Backyard
+dedicated workspace,DedicatedWorkspace
+lake access,LakeAccess
+outdoor shower,OutdoorShower
+equipment,Equipment
+cooking equipment,CookingEquipment
+kettle,Kettle
+hot water kettle,Kettle
+electric kettle,ElectricKettle
+kitchenware,Kitchenware
+baking sheet,BakingSheet
+cooking basics - pots and pans,CookingBasics-PotsAndPans
+dishes and silverware,DishesAndSilverware
+wine glasses,WineGlasses
+tea maker,TeaMaker
+home appliance,HomeAppliance
+heating system,HeatingSystem
+heating,HeatingSystem
+portable heater,PortableHeater
+iron,Iron
+tv,Television
+television,Television
+screen tv,Television
+"44"" hdtv",Television
+tv with standard cable,Television
+satellite tv,SatelliteTv
+satellite channels,SatelliteTv
+pay-per-view channels,Pay-Per-ViewChannels
+cable channels,Pay-Per-ViewChannels
+amazon prime video,Pay-Per-ViewChannels
+netflix,Pay-Per-ViewChannels
+flat-screen tv,Flat-ScreenTv
+lamp,Lamp
+phone,Telephone
+telephone,Telephone
+ac,AirConditioning
+aircon,AirConditioning
+air conditioning,AirConditioning
+central air conditioning,AirConditioning
+conditioner,AirConditioning
+gilchrist soames  conditioner,AirConditioning
+mini-bar,Refrigerator
+refrigerator,Refrigerator
+fridge,Refrigerator
+bosch refrigerator,Refrigerator
+mini fridge,Refrigerator
+coffee machine,CoffeeMachine
+coffee maker,CoffeeMachine
+coffee maker: keurig coffee machine,CoffeeMachine
+coffee maker: nespresso,CoffeeMachine
+coffee maker: pour-over coffee,CoffeeMachine
+oven,Oven
+stainless steel oven,Oven
+freezer,Freezer
+microwave,Microwave
+microwave-oven,Microwave
+dishwasher,Dishwasher
+washing machine,WashingMachine
+free washer,WashingMachine
+free washer – in building,WashingMachine
+free washer – in unit,WashingMachine
+washer,WashingMachine
+washer – in building,WashingMachine
+stove,Stove
+stovetop,Stovetop
+electric stove,ElectricStove
+stainless steel electric stove,ElectricStove
+gas stove,GasStove
+single induction hob induction stove,SingleInductionHobInductionStove
+alarm clock,AlarmClock
+cd player,CdPlayer
+computer,Computer
+laptop,Computer
+dvd player,DvdPlayer
+fan,Fan
+ceiling fan,Fan
+portable fans,Fan
+game console,GameConsole
+game console ps2,GameConsole
+game console ps3,GameConsole
+game console - nintendo wii,GameConsole
+video games,GameConsole
+ipad,Ipad
+ipod dock,IpodDock
+radio,Radio
+‘ruark’ deluxe bluetooth radio bluetooth sound system,Radio
+socket near the bed,SocketNearTheBed
+toaster,Toaster
+blender,Blender
+bread maker,BreadMaker
+ev charger,EvCharger
+rice maker,RiceMaker
+sound system,SoundSystem
+trash compactor,TrashCompactor
+game,GameEquipment
+game equipment,GameEquipment
+karaoke,Karaoke
+badminton equipment,BadmintonEquipment
+tennis equipment,TennisEquipment
+table tennis,TableTennis
+darts,Darts
+billiards,Billiards
+pool table,Billiards
+board games/puzzles,BoardGamesPuzzles
+board games,BoardGamesPuzzles
+bed linen,BedLinen
+linen,BedLinen
+bed linens,BedLinen
+bed sheets,BedLinen
+sun loungers or beach chairs,SunLoungersOrBeachChairs
+sun lounger,SunLounger
+tea/coffee maker,TeaCoffeeMaker
+bikes available (free),BikesAvailableFree
+carpeted,Carpeted
+fax,Fax
+pet basket,PetBasket
+mosquito net,MosquitoNet
+pet bowls,PetBowls
+electric blankets,ElectricBlankets
+slippers,Slippers
+outdoor furniture,OutdoorFurniture
+sun umbrellas,SunUmbrellas
+pool/beach towels,PoolBeachTowels
+barbecue utensils,BarbecueUtensils
+ethernet connection,EthernetConnection
+fireplace guards,FireplaceGuards
+hanger,Hanger
+hangers,Hanger
+room-darkening shades,Room-DarkeningShades
+food and drinks,FoodAndDrinks
+bottle of water,BottleOfWater
+oil,Oil
+salt and pepper,SaltAndPepper
+child care,ChildCare
+baby safety gates,BabySafetyGates
+kids' outdoor play equipment,KidsOutdoorPlayEquipment
+strollers,Strollers
+child safety socket covers,ChildSafetySocketCovers
+children's high chair,ChildrenSHighChair
+baby monitor,BabyMonitor
+changing table,ChangingTable
+children books and toys,ChildrenBooksAndToys
+children’s dinnerware,ChildrenSDinnerware
+crib,Crib
+pack ’n play/travel crib,Crib
+outlet covers,OutletCovers
+table corner guards,TableCornerGuards
+window guards,WindowGuards
+furniture,Furniture
+sofa,Sofa
+clothing storage,ClothingStorage
+wardrobe or closet,ClothingStorage
+closet,Closet
+dresser and closet,Closet
+walk-in closet,Walk-InCloset
+closet and dresser,ClosetAndDresser
+clothes rack,ClothesRack
+desk,Desk
+dedicated workspace: desk,Desk
+dedicated workspace: desk and office chair,Desk
+dedicated workspace: table,Desk
+dining table,DiningTable
+drying rack for clothing,DryingRackForClothing
+fireplace,Fireplace
+indoor fireplace,Fireplace
+high chair,HighChair
+soundproofing,Soundproofing
+piano,Piano

@@ -20,6 +20,7 @@ pip install wheel
 pip install -r requirements.txt ## install required modules
 pip install -e . ## install local repository code
 python -m spacy download en_core_web_lg ## download spacy language model for english
+pip install mordecai==2.1.0 --no-deps
 ```
 
 To recreate the basic filesystem structure and the input files necessary to run the pipelines you can use the local_datalake.tar.gz file to create a scheleton (no booking.com or AirBnB data is included but only lookup tables).
@@ -36,6 +37,11 @@ To get the java RML mapper jar file:
 ```bash
 cd local_datalake/code/
 sh get_mapper.sh
+```
+
+We have to ensure that Java 11.x or higher is installed in the system. For Ubuntu 20.04:
+```
+sudo apt install default-jre
 ```
 
 Now we can prepare dagster home directory:

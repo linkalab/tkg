@@ -6,3 +6,7 @@ EP05	An acco:BedDetails is not connected with a tao:Accommodation with inverse o
 EP06	A tao:LocationAmenity is not associated to any tao:Accommodation or tao:LodgingFacility with tao:feature property.
 EP07	A tao:LodgingDescription is not associated to any tao:LodgingFacility with inverse of schema:subjectOf property.
 EP08	A tao:NormAggregateRating is not associated to any tao:LodgingFacility with tao:lodgingFacilityReviewed property.
+EP09	A tao:NormAggregateRating has more than a value for its tao:normRatingValue data property.
+EP10	A tao:NormAggregateRating has not a value for its tao:normRatingValue data property.
+EP11	A tao:NormRating has not a value for its tao:normRatingValue data property.
+EP12	A tao:NormRating has more than a value for its tao:normRatingValue data property.

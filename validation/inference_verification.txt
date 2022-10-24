@@ -8,3 +8,8 @@ I07	If a tao:CampingPitch is part of a tao:LodgingFacility then the latter is a 
 I08	If a LodgingFacility is part of an administrative division which is part of a ToristDestination than that LodgingFacillity is considered part of that TouristDestination
 I09	If a tao:LodgingBusiness has a tao:NormAggregatedRate with schema:ratingValue less or equal to .6 it is a LowRatedFacility, if it is >=.6 and <.7.5 it is a MediumRatedFacility, if it is >=.7.5 it is HighRatedFacility
 I10	An accommodation feature which is associated to an Accommodation (tao:includes) is also associated to the tao:LodgingFacility that includes the Accommodation 
+I11	If tao:LodgingFacility is associated with a tao:aggregateNormRating to a tao:NormAggregateRating then the inverse relation with tao:lodgingFacilityReviewed is inferred
+I12	If a tao:EntireHouse is part of a tao:LodgingFacility then the latter is a tao:House
+I13	If a tao:EntireLoft is part of a tao:LodgingFacility then the latter is a tao:Loft
+I14	If a tao:EntireBoat is part of a tao:LodgingFacility then the latter is a tao:Boat
+I15	if a tao:Lodging facility is associated with a tao:isContainedInGeo with a ToursistDestination than the inverse relation with tao:containsGeo is inferred
